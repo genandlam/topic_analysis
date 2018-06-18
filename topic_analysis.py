@@ -26,7 +26,7 @@ from gensim.models import ldamodel
 # NLTK Stop words
 #from nltk.corpus import stopwords
 import nltk 
-nltk.download()  
+#nltk.download()  
 from nltk.corpus import stopwords
 
     
@@ -74,30 +74,37 @@ def convert_df(transcripts,participants):
     for participant in participants:
       for index, row in transcripts[participant].iterrows():
         if (row.speaker =='Ellie' or row.value !="hi i'm ellie thanks for coming in today" or
-            row.value !="i was created to talk to people in a safe and secure environment" or
+           row.value !="i was created to talk to people in a safe and secure environment" or
            row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
            row.value !="i'll ask a few questions to get us started" or
            row.value !="and please feel free to tell me anything your answers are totally confidential " or
            row.value !="i don't judge i can't i'm a computer" or
-           row.value !='think of me as a friend' ):
+           row.value !='think of me as a friend' or 
+           row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)"
+           ):
            e_list.append(row.value)
     
     e_list=list(set(e_list))
     print(len(e_list))
-    e_list = [x for x in e_list if str(x) != 'nan'] 
-    e_list = [i for i in e_list if i[0] != "IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)"]
-
-#    e_list.remove(np.nan)
+    # Remove IntroV4Confirmation
+    y=e_list.index("IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)")
+    del(e_list[y])
+        
+    e_list= [x for x in e_list if str(x) != 'nan'] 
+  
+    
+ 
     
     # removing single word or 2 word sentences     
     for sentence in e_list:
       if len(sentence.split())== 1 or len(sentence.split())== 2 :
-        e_list.remove(sentence)
-        
+       e_list.remove(sentence)
+    print("new_list")
     print (len(e_list))
+    print(e_list)
     
     
-    return e_list 
+    return e_list
 
 
 
@@ -107,21 +114,22 @@ def stop_word():
     stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
     
     stop_words.extend(['all', 'just', 'being', 'over', 'both', 'through', 'yourselves', 'its', 'before',
-                        'herself', 'had', 'should', 'to', 'only', 'under', 'ours', 'has', 'do', 'them', 
-                        'his', 'very', 'they', 'not', 'during', 'now', 'him', 'nor', 'did', 'this', 'she',
-                        'each', 'further', 'where', 'few', 'because', 'doing', 'some', 'are', 'our', 'ourselves',
-                        'out', 'what', 'for', 'while', 'does', 'above', 'between', 't', 'be', 'we', 'who', 'were', 'here',
-                        'hers', 'by', 'on', 'about', 'of', 'against', 's', 'or', 'own', 'into', 'yourself', 'down', 'your', 
-                        'from', 'her', 'their', 'there', 'been', 'whom', 'too', 'themselves', 'was', 'until', 'more', 'himself', 
-                        'that', 'but', 'don', 'with', 'than', 'those', 'he', 'me', 'myself', 'these', 'up', 'will', 'below',
-                        'can', 'theirs', 'my', 'and', 'then', 'is', 'am', 'it', 'an', 'as', 'itself', 'at', 'have', 'in', 'any', 
-                        'if', 'again', 'no', 'when', 'same', 'how', 'other', 'which', 'you', 'after', 'most', 'such', 'why', 'a', 
-                        'off', 'i', 'yours', 'so', 'the', 'having', 'once','thanks', "i'm","get",
-                         'about',"<laughter>","i'll",'us',"okay","uh","um","know","think",'something','like',"that's",'really',
-                         'sometime','things',"know","i\'m","that\'s", "how","eh","mm", "thing","(what","thing","well","anything",
-                        "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell","ellie17dec2012_08",
-                        "(what\'s","hey","give_example","mhm","(i"])
-#    print(stop_words)
+                    'herself', 'had', 'should', 'to', 'only', 'under', 'ours', 'has', 'do', 'them', 
+                    'his', 'very', 'they', 'not', 'during', 'now', 'him', 'nor', 'did', 'this', 'she',
+                    'each', 'further', 'where', 'few', 'because', 'doing', 'some', 'are', 'our', 'ourselves',
+                    'out', 'what', 'for', 'while', 'does', 'above', 'between', 't', 'be', 'we', 'who', 'were', 'here',
+                    'hers', 'by', 'on', 'about', 'of', 'against', 's', 'or', 'own', 'into', 'yourself', 'down', 'your', 
+                    'from', 'her', 'their', 'there', 'been', 'whom', 'too', 'themselves', 'was', 'until', 'more', 'himself', 
+                    'that', 'but', 'don', 'with', 'than', 'those', 'he', 'me', 'myself', 'these', 'up', 'will', 'below',
+                    'can', 'theirs', 'my', 'and', 'then', 'is', 'am', 'it', 'an', 'as', 'itself', 'at', 'have', 'in', 'any', 
+                    'if', 'again', 'no', 'when', 'same', 'how', 'other', 'which', 'you', 'after', 'most', 'such', 'why', 'a', 
+                    'off', 'i', 'yours', 'so', 'the', 'having', 'once','thanks', "i'm","get",
+                     'about',"<laughter>","i'll",'us',"okay","uh","um","know","think",'something','like',"that's",'really',
+                     'sometime','things',"know","i\'m","that\'s", "how","eh","mm", "thing","(what","thing","well","anything",
+                    "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell","ellie17dec2012_08",
+                    "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell'])
+    #print(stop_words)
+    
     
     
 
@@ -152,13 +160,13 @@ def Bi_tri_model(data_words):
    
 
 # Define functions for stopwords, bigrams, trigrams and lemmatization
-def remove_stopwords(texts):
+def remove_stopwords(texts,stop_words):
     return [[word for word in simple_preprocess(str(doc)) if word not in stop_words] for doc in texts]
 
 def make_bigrams(texts,bigram_mod):
     return [bigram_mod[doc] for doc in texts]
 
-def make_trigrams(texts,bigram_mod):
+def make_trigrams(texts,bigram_mod,trigram_mod):
     return [trigram_mod[bigram_mod[doc]] for doc in texts]
 
 def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
@@ -209,10 +217,46 @@ def score (corpus,data_lemmatized,id2word,lda_model):
     # Compute Perplexity
     print('\nPerplexity: ', lda_model.log_perplexity(corpus))  # a measure of how good the model is. lower the better.
     
-    # Compute Coherence Score
+    # Compute Coherence Score using cv
     coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
     coherence_lda = coherence_model_lda.get_coherence()
-    print('\nCoherence Score: ', coherence_lda)
+    print('\nCoherence Score c_v: ', coherence_lda)
+    
+    # Compute Coherence Score using UMass
+    coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence="u_mass")
+    coherence_lda = coherence_model_lda.get_coherence()
+    print('\nCoherence Score u_mass: ', coherence_lda)
+    
+def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
+    """
+    Compute c_v coherence for various number of topics
+
+    Parameters:
+    ----------
+    dictionary : Gensim dictionary
+    corpus : Gensim corpus
+    texts : List of input texts
+    limit : Max num of topics
+    steps : no. of topics
+
+    Returns:
+    -------
+    model_list : List of LDA topic models
+    coherence_values : Coherence values corresponding to the LDA model with respective number of topics
+    """
+    coherence_values_u_mass = []
+    coherence_values_c_v = []
+    model_list = []
+    for num_topics in range(start, limit, step):
+        model=ldamodel.LdaModel(corpus=corpus, id2word=dictionary, num_topics=num_topics)
+        model_list.append(model)
+        coherencemodel_u_mass = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='u_mass')
+        coherence_values_u_mass.append(coherencemodel_u_mass.get_coherence())
+        coherencemodel_c_v = CoherenceModel(model=model, texts=texts, dictionary=dictionary, coherence='c_v')
+        coherence_values_c_v.append(coherencemodel_c_v.get_coherence())   
+        
+    
+    return model_list, coherence_values_u_mass, coherence_values_c_v, model
 
 
 
@@ -236,14 +280,16 @@ if __name__ == '__main__':
     
     print(data_words[:1])
     
-    # Remove Stop Words
-    data_words_nostops = remove_stopwords(data_words)
-    
     #building model
     bigram_mod, trigram_mod =Bi_tri_model(data_words)
     
+    # Remove Stop Words
+    data_words_nostops = remove_stopwords(data_words, stop_words)
+    
+    
     # Form Bigrams
     data_words_bigrams = make_bigrams(data_words_nostops,bigram_mod)
+    #Remove empty strings from a list of strings
     data_words_bigrams = filter(None, data_words_bigrams)
     
     # Initialize spacy 'en' model, keeping only tagger component (for efficiency)
@@ -261,6 +307,29 @@ if __name__ == '__main__':
     
     
     score (corpus,data_lemmatized,id2word,lda_model)
+    
+    model_list,  coherence_values_u_mass, coherence_values_c_v, model = compute_coherence_values(dictionary=id2word, corpus=corpus, texts=data_lemmatized, start=2, limit=40, step=6)
+
+    lda_model.save('lda_model')
+    
+    # Show graph
+    #u_mass
+#    import matplotlib.pyplot as plt
+#    limit=40; start=2; step=6;
+#    x = range(start, limit, step)
+#    plt.plot(x, coherence_values_u_mass)
+#    plt.xlabel("Num Topics")
+#    plt.ylabel("Coherence score")
+#    plt.legend(("coherence_values"), loc='best')
+#    plt.show()
+#    #c_v
+#    limit=40; start=2; step=6;
+#    x = range(start, limit, step)
+#    plt.plot(x, coherence_values_c_v)
+#    plt.xlabel("Num Topics")
+#    plt.ylabel("Coherence score")
+#    plt.legend(("coherence_values"), loc='best')
+#    plt.show()
     
   #  save_csv(corpus,data_lemmatized,id2word,lda_model)
     
