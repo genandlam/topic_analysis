@@ -62,7 +62,7 @@ def data_retrieve(working_dir ):
         for file in file_list:
             for participant in participants:
                 transcripts[participant] = pd.read_csv(file.format(participant), sep='\t')
-                transcripts[participant]['topic']= np.nan  
+#                transcripts[participant]['topic']= np.nan  
                 
     return transcripts,participants
 
@@ -171,7 +171,11 @@ def make_trigrams(texts,bigram_mod,trigram_mod):
 
 def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
     """https://spacy.io/api/annotation"""
+    # spacy for lemmatization
+    import spacy
     texts_out = []
+    # Initialize spacy 'en' model, keeping only tagger component (for efficiency)
+    nlp = spacy.load('en', disable=['parser', 'ner'])
     for sent in texts:
         doc = nlp(" ".join(sent)) 
         texts_out.append([token.lemma_ for token in doc if token.pos_ in allowed_postags])
@@ -292,8 +296,7 @@ if __name__ == '__main__':
     #Remove empty strings from a list of strings
     data_words_bigrams = filter(None, data_words_bigrams)
     
-    # Initialize spacy 'en' model, keeping only tagger component (for efficiency)
-    nlp = spacy.load('en', disable=['parser', 'ner'])
+    
     
     # Do lemmatization keeping only noun, adj, vb, adv
     data_lemmatized = lemmatization(data_words_bigrams, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV'])
@@ -311,6 +314,7 @@ if __name__ == '__main__':
     model_list,  coherence_values_u_mass, coherence_values_c_v, model = compute_coherence_values(dictionary=id2word, corpus=corpus, texts=data_lemmatized, start=2, limit=40, step=6)
 
     lda_model.save('lda_model')
+    id2word.save("id2word.dict")
     
     # Show graph
     #u_mass
