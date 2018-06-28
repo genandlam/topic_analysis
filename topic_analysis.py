@@ -171,8 +171,7 @@ def make_trigrams(texts,bigram_mod,trigram_mod):
 
 def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
     """https://spacy.io/api/annotation"""
-    # spacy for lemmatization
-    import spacy
+    
     texts_out = []
     # Initialize spacy 'en' model, keeping only tagger component (for efficiency)
     nlp = spacy.load('en', disable=['parser', 'ner'])

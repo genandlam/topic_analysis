@@ -14,19 +14,25 @@ import gensim
 from gensim.models import ldamodel
 from gensim import corpora 
 import numpy as np
+import pandas as pd
 
 
-
-model =   gensim.models.LdaModel.load('lda_model')
+lda_model =   gensim.models.LdaModel.load('lda_model')
 id2word =  corpora.Dictionary.load('lda_model.id2word')
 #print(type(id2word))
 
-#data =np.load('lda.model.expElogbeta.npy')
-#print topics
-#for i in range(0, model.num_topics):
-#    print model.print_topic(i)
 
 
+def topic_to_dic(lda_model):
+    topic = {}
+    for idx in range(lda_model.num_topics):
+        tt = lda_model.get_topic_terms(idx,20)
+        topic[idx]=([id2word[pair[0]] for pair in tt])
+        
+
+#     print model.print_topic(idx)
+    return topic    
+print(lda_model.print_topics())
 working_dir = "/Users/genevieve/Desktop/raw_data/transcript_data"
 transcripts,participants= data_retrieve(working_dir)
 
@@ -40,13 +46,14 @@ def clean_text(text):
     
 for participant in participants:
         for index, row in transcripts[participant].iterrows():
+         
             ques_vec = []
             topic_vec = []
-            topic_vec = model[ques_vec]
+            topic_vec = lda_model[ques_vec]
             if row.speaker =='Ellie':    
                 text=row.value
                 bow = id2word.doc2bow(clean_text(text))
-                a=model[bow]
+                a=lda_model[bow]
                 
                 print a[0][1]
 
@@ -64,8 +71,6 @@ def loop_transcript():
     
     for participant in participants:
         for index, row in transcripts[participant].iterrows():
-            ques_vec = []
-            ques_vec = dictionary.doc2bow(query)
             if row.speaker =='Ellie':
                 query=row.value
                 query = query.split()
@@ -78,7 +83,11 @@ def loop_transcript():
     return d            
 
    
-
+#new_topics = new_lda[corpus]
+#
+#for topic in new_topics:
+#
+#      print(topic)
 
 
 
@@ -89,6 +98,8 @@ def loop_transcript():
 
 
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
+      topic=topic_to_dic()
 #    d=loop_transcript()
+#    
     
