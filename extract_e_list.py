@@ -38,13 +38,13 @@ def convert_df(transcripts,participants):
     
     for participant in participants:
       for index, row in transcripts[participant].iterrows():
-        if (row.speaker =='Ellie' or row.value !="hi i'm ellie thanks for coming in today" or
+        if (row.speaker =='Ellie' and (row.value !="hi i'm ellie thanks for coming in today" or
             row.value !="i was created to talk to people in a safe and secure environment" or
            row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
            row.value !="i'll ask a few questions to get us started" or
            row.value !="and please feel free to tell me anything your answers are totally confidential " or
            row.value !="i don't judge i can't i'm a computer" or
-           row.value !='think of me as a friend'):
+           row.value !='think of me as a friend')):
            e_list.append(row.value)
     
     e_list=list(set(e_list))

@@ -82,7 +82,8 @@ def convert_df(transcripts,participants):
            row.value !='think of me as a friend' or 
            row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)" or
            row.value !="i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential" or
-           row.value !="think of me as a friend i don't judge i can't i'm a computer")):
+           row.value !="think of me as a friend i don't judge i can't i'm a computer" or
+           row.value!="hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment")):
             e_list.append(row.value)
     
     e_list=list(set(e_list))
