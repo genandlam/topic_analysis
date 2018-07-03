@@ -73,16 +73,17 @@ def convert_df(transcripts,participants):
     
     for participant in participants:
       for index, row in transcripts[participant].iterrows():
-        if (row.speaker =='Ellie' or row.value !="hi i'm ellie thanks for coming in today" or
+        if (row.speaker =='Ellie' and (row.value !="hi i'm ellie thanks for coming in today" or
            row.value !="i was created to talk to people in a safe and secure environment" or
            row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
            row.value !="i'll ask a few questions to get us started" or
            row.value !="and please feel free to tell me anything your answers are totally confidential " or
            row.value !="i don't judge i can't i'm a computer" or
            row.value !='think of me as a friend' or 
-           row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)"
-           ):
-           e_list.append(row.value)
+           row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)" or
+           row.value !="i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential" or
+           row.value !="think of me as a friend i don't judge i can't i'm a computer")):
+            e_list.append(row.value)
     
     e_list=list(set(e_list))
     print(len(e_list))
@@ -99,9 +100,9 @@ def convert_df(transcripts,participants):
     for sentence in e_list:
       if len(sentence.split())== 1 or len(sentence.split())== 2 :
        e_list.remove(sentence)
-    print("new_list")
+#    print("new_list")
     print (len(e_list))
-    print(e_list)
+#    print(e_list)
     
     
     return e_list
@@ -116,7 +117,7 @@ def stop_word():
     stop_words.extend(['all', 'just', 'being', 'over', 'both', 'through', 'yourselves', 'its', 'before',
                     'herself', 'had', 'should', 'to', 'only', 'under', 'ours', 'has', 'do', 'them', 
                     'his', 'very', 'they', 'not', 'during', 'now', 'him', 'nor', 'did', 'this', 'she',
-                    'each', 'further', 'where', 'few', 'because', 'doing', 'some', 'are', 'our', 'ourselves',
+                    'each', 'further', 'where', 'few', 'because',  'some', 'are', 'our', 'ourselves',
                     'out', 'what', 'for', 'while', 'does', 'above', 'between', 't', 'be', 'we', 'who', 'were', 'here',
                     'hers', 'by', 'on', 'about', 'of', 'against', 's', 'or', 'own', 'into', 'yourself', 'down', 'your', 
                     'from', 'her', 'their', 'there', 'been', 'whom', 'too', 'themselves', 'was', 'until', 'more', 'himself', 
@@ -127,7 +128,7 @@ def stop_word():
                      'about',"<laughter>","i'll",'us',"okay","uh","um","know","think",'something','like',"that's",'really',
                      'sometime','things',"know","i\'m","that\'s", "how","eh","mm", "thing","(what","thing","well","anything",
                     "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell","ellie17dec2012_08",
-                    "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell'])
+                    "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell','great'])
     #print(stop_words)
     
     
