@@ -84,22 +84,23 @@ def convert_df(transcripts,participants):
     for participant in participants:
       for index, row in transcripts[participant].iterrows():
         
-        if (row.speaker =='Ellie' and (row.value !="hi i'm ellie thanks for coming in today" or
-           row.value !="i was created to talk to people in a safe and secure environment" or
-           row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
-           row.value !="i'll ask a few questions to get us started" or
-           row.value !="and please feel free to tell me anything your answers are totally confidential " or
-           row.value !="i don't judge i can't i'm a computer" or
-           row.value !='think of me as a friend' or 
-           row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)" or
-           row.value !="i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential" or
-           row.value !="think of me as a friend i don't judge i can't i'm a computer" or
-           row.value !="hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment" or 
-           row.value !='i love listening to people talk ' or 
-           row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started" or 
-           row.value !='and please feel free to tell me anything your answers are totally confidential are you okay with this ')):
-            e_list.append(row.value)
-    
+#        if (row.speaker =='Ellie' and (row.value !="hi i'm ellie thanks for coming in today" or
+#           row.value !="i was created to talk to people in a safe and secure environment" or
+#           row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
+#           row.value !="i'll ask a few questions to get us started" or
+#           row.value !="and please feel free to tell me anything your answers are totally confidential " or
+#           row.value !="i don't judge i can't i'm a computer" or
+#           row.value !='think of me as a friend' or 
+#           row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)" or
+#           row.value !="i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential" or
+#           row.value !="think of me as a friend i don't judge i can't i'm a computer" or
+#           row.value !="hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment" or 
+#           row.value !='i love listening to people talk ' or 
+#           row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started" or 
+#           row.value !='and please feel free to tell me anything your answers are totally confidential are you okay with this ')):
+#            e_list.append(row.value)
+          if (row.speaker =='Ellie'):
+              e_list.append(row.value)
     e_list=list(set(e_list))
     print(len(e_list))
    
@@ -127,6 +128,8 @@ def convert_df(transcripts,participants):
     del(e_list[y])
     y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment think of me as a friend i don't judge i can't i'm a computer  ")
     del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment think of me as a friend i don't judge i can't i'm a computer")
+    del(e_list[y])
     y=e_list.index("and please feel free to tell me anything you're answers are totally confidential")
     del(e_list[y])
     y=e_list.index('and please feel free to tell me anything your answers are totally confidential are you okay with this ')
@@ -151,9 +154,43 @@ def convert_df(transcripts,participants):
     del(e_list[y])
     y=e_list.index("i'm great thanks")
     del(e_list[y])
+    y=e_list.index("great_thanks (i'm great thanks)")
+    del(e_list[y])
+    y=e_list.index('i was created to talk to people in a safe and secure environment ')
+    del(e_list[y])
+    y=e_list.index('i was created to talk to people in a safe and secure environment')
+    del(e_list[y])
+    y=e_list.index("i'm sorry ")
+    del(e_list[y])
+    y=e_list.index('appreciate_open (thanks for sharing your thoughts with me)')
+    del(e_list[y])
+    y=e_list.index('that_sucks (that sucks)')
+    del(e_list[y])
+    y=e_list.index("i'm sorry to hear that ")
+    del(e_list[y])
+    y=e_list.index("sorry_hear (i'm sorry to hear that)")
+    del(e_list[y])
     y=e_list.index('thanks for sharing your thoughts with me')
     del(e_list[y])
     y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment " )
+    del(e_list[y])
+    y=e_list.index("Ellie17Dec2012_03 (that's good)")
+    del(e_list[y])
+    y=e_list.index('thank_you (thank you)')
+    del(e_list[y])
+    y=e_list.index("thats_good (that's good)")
+    del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today")
+    del(e_list[y])
+    y=e_list.index('oh my gosh')
+    del(e_list[y])
+    y=e_list.index("that's so good to hear")
+    del(e_list[y])
+    y=e_list.index('right2 (right)')
+    del(e_list[y])
+    y=e_list.index("good_hear (that's so good to hear)")
+    del(e_list[y])
+    y=e_list.index("that's so good to hear ")
     del(e_list[y])
     e_list= [x for x in e_list if str(x) != 'nan'] 
     print(len(e_list))
@@ -168,7 +205,7 @@ def convert_df(transcripts,participants):
        e_list.remove(sentence)
 #    print("new_list")
     print (len(e_list))
-    print(e_list)
+#S    print(e_list)
     
     
     return e_list
@@ -190,11 +227,11 @@ def stop_word():
                     'that', 'but', 'don', 'with', 'than', 'those', 'he', 'me', 'myself', 'these', 'up', 'will', 'below',
                     'can', 'theirs', 'my', 'and', 'then', 'is', 'am', 'it', 'an', 'as', 'itself', 'at', 'have', 'in', 'any', 
                     'if', 'again', 'no', 'when', 'same', 'how', 'other', 'which', 'you', 'after', 'most', 'such', 'why', 'a', 
-                    'off', 'i', 'yours', 'so', 'the', 'having', 'once','thanks', "i'm","get",
+                    'off', 'i', 'yours', 'so', 'the', 'having', 'once','thanks', "i'm","get",'oh',
                      'about',"<laughter>","i'll",'us',"okay","uh","um","know","think",'something','like',"that's",'really',
                      'sometime','things',"know","i\'m","that\'s", "how","eh","mm", "thing","(what","thing","well","anything",
-                    "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell",
-                    "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell','great'])
+                    "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell",'huh',
+                    "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell','great','uh'])
     #print(stop_words)
     
     
