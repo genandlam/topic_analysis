@@ -43,36 +43,47 @@ import spacy
 import warnings
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 
+def train_index(working_dir):
+     df = pd.read_csv(working_dir)
+     train_id =df["Participant_ID"].tolist() 
+     
+     
+     return train_id
 
-
-
-def data_retrieve(working_dir ):
-    for root, dirs, files in os.walk(working_dir):
-        file_list = []
+def data_retrieve(working_dir,train_id):
+    
+    
+#    for root, dirs, files in os.walk(working_dir):
+#        file_list = []
         participants= []
         transcripts = {}
+        participants=train_id
         
-        for filename in files:
-            if filename.endswith('_TRANSCRIPT.csv'):
-               participant_id = int(filename.split('_')[0][0:3])
-               if(participant_id != 342 | participant_id !=394 | participant_id !=398 | participant_id !=460  ):
-                   participants.append(participant_id )
-                   file_list.append(os.path.join(root, filename)) 
+#        for filename in files:
+#            if filename.endswith('_TRANSCRIPT.csv'):
+#               participant_id = int(filename.split('_')[0][0:3]) 
+#               
+#               participants.append(participant_id )
+#               file_list.append(os.path.join(root, filename)) 
                     
-        for file in file_list:
-            for participant in participants:
-                transcripts[participant] = pd.read_csv(file.format(participant), sep='\t')
+#        for file in file_list:
+        for participant in participants:
+                filename= str(participant)+'_TRANSCRIPT.csv'
+                location=os.path.join(working_dir, filename)
+                transcripts[participant] = pd.read_csv(location, sep='\t')
 #                transcripts[participant]['topic']= np.nan  
                 
-    return transcripts,participants
+        return transcripts,participants
 
     
 def convert_df(transcripts,participants):
   
     e_list = []
+   
     
     for participant in participants:
       for index, row in transcripts[participant].iterrows():
+        
         if (row.speaker =='Ellie' and (row.value !="hi i'm ellie thanks for coming in today" or
            row.value !="i was created to talk to people in a safe and secure environment" or
            row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you" or
@@ -83,17 +94,71 @@ def convert_df(transcripts,participants):
            row.value !="IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)" or
            row.value !="i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential" or
            row.value !="think of me as a friend i don't judge i can't i'm a computer" or
-           row.value!="hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment")):
+           row.value !="hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment" or 
+           row.value !='i love listening to people talk ' or 
+           row.value !="i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started" or 
+           row.value !='and please feel free to tell me anything your answers are totally confidential are you okay with this ')):
             e_list.append(row.value)
     
     e_list=list(set(e_list))
     print(len(e_list))
+   
+            #del(e_list[row_num])
+   
     # Remove IntroV4Confirmation
+#    e_list = [i for i in e_list if i[0]!='i love listening to people talk ']
+#    e_list = [i for i in e_list if i[0]!='uh_huh (uh huh)']
+    
     y=e_list.index("IntroV4Confirmation (hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential are you ok with this)")
     del(e_list[y])
-        
+    y=e_list.index("i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started")
+    del(e_list[y]) 
+    y=e_list.index("i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started ")
+    del(e_list[y]) 
+    y=e_list.index("i love listening to people talk ")
+    del(e_list[y])
+    y=e_list.index('uh_huh (uh huh)')
+    del(e_list[y])
+    y=e_list.index('and please feel free to tell me anything your answers are totally confidential ')
+    del(e_list[y])
+    y=e_list.index('and please feel free to tell me anything you answers are totally confidential')
+    del(e_list[y])
+    y=e_list.index("i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential ")
+    del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment think of me as a friend i don't judge i can't i'm a computer  ")
+    del(e_list[y])
+    y=e_list.index("and please feel free to tell me anything you're answers are totally confidential")
+    del(e_list[y])
+    y=e_list.index('and please feel free to tell me anything your answers are totally confidential are you okay with this ')
+    del(e_list[y])
+    y=e_list.index("i''m here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential")
+    del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment think of me as a friend i don't judge i can't i'm a computer i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential ")
+    del(e_list[y])
+    y=e_list.index("i'm not a therapist but i'm here to learn about people and would love to learn about you i'll ask a few questions to get us started   ")
+    del(e_list[y])
+    y=e_list.index("i'm not a therapist but i'm here to learn about people and would love to learn about you")
+    del(e_list[y]) 
+    y=e_list.index("i'm not a therapist but i'm here to learn about people and would love to learn about you ")
+    del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today " )
+    del(e_list[y])
+    y=e_list.index('thanks it was great chatting with you')
+    del(e_list[y])
+    y=e_list.index('thanks for sharing your thoughts with me ')
+    del(e_list[y])
+    y=e_list.index("okay i think i've asked everything i need to thanks for sharing your thoughts with me ")
+    del(e_list[y])
+    y=e_list.index("i'm great thanks")
+    del(e_list[y])
+    y=e_list.index('thanks for sharing your thoughts with me')
+    del(e_list[y])
+    y=e_list.index("hi i'm ellie thanks for coming in today i was created to talk to people in a safe and secure environment " )
+    del(e_list[y])
     e_list= [x for x in e_list if str(x) != 'nan'] 
-  
+    print(len(e_list))
+    
+    
     
  
     
@@ -103,7 +168,7 @@ def convert_df(transcripts,participants):
        e_list.remove(sentence)
 #    print("new_list")
     print (len(e_list))
-#    print(e_list)
+    print(e_list)
     
     
     return e_list
@@ -128,7 +193,7 @@ def stop_word():
                     'off', 'i', 'yours', 'so', 'the', 'having', 'once','thanks', "i'm","get",
                      'about',"<laughter>","i'll",'us',"okay","uh","um","know","think",'something','like',"that's",'really',
                      'sometime','things',"know","i\'m","that\'s", "how","eh","mm", "thing","(what","thing","well","anything",
-                    "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell","ellie17dec2012_08",
+                    "that)","example","see","(when","(can","(that\'s","much""could","(how","i\'ve","what\'s","(why","feel","(tell",
                     "(what\'s","hey","give_example","mhm","(i",'uh',"would",'guess','ellie','xxx','do','okay_confirm','tell','great'])
     #print(stop_words)
     
@@ -268,12 +333,15 @@ def compute_coherence_values(dictionary, corpus, texts, limit, start=2, step=3):
 
 if __name__ == '__main__':
     
+    train_dir='/media/hdd1/genfyp/depression_data/train_split_Depression_AVEC2017.csv'
+    train_id=train_index(train_dir)
+    
     working_dir = "/media/hdd1/genfyp/raw_data/transcript_data/"
 #    with open("e_list.csv", 'rb') as f:
 #        reader = csv.reader(f)
 #        e_list = list(reader)
 
-    transcripts,participants =data_retrieve(working_dir)
+    transcripts,participants =data_retrieve(working_dir,train_id)
     
     #list ofEllie dictionary of all the unique sentences Ellie said 
     e_list=convert_df(transcripts,participants)
