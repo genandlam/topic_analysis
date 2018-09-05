@@ -21,3 +21,9 @@ def personality():
                'pretty outgoing','mixture','at times','extrovert','occassional','mm no','definitely not shy']
     
     return intro,not_intro
+
+def illness():
+    illness=['yes','I have','i have','i am dignosed with',"i'm dignosed with"]
+    not_illness=['do not have','I am not','nope',]
+    
+    return illness,not_illness
