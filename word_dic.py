@@ -23,7 +23,18 @@ def personality():
     return intro,not_intro
 
 def illness():
-    illness=['yes','I have','i have','i am dignosed with',"i'm dignosed with"]
-    not_illness=['do not have','I am not','nope',]
+    illness=['yes','I have depression','yes i have','i am dignosed with',"i'm dignosed with",'yeah','dignosed with depression',]
+    not_illness=['do not have','I am not','nope','never' ,'i have not',"i haven't",'no i have not',"no i haven't","no i have not",
+                 "no i haven't","i don't think ",'no not at all','no not','um no','no <laughter>','no i','no mm','diagnosed by a doctor no'
+                 ,'uh no','have not']
     
     return illness,not_illness
+
+
+
+def therapy():
+    useful=['useful','yes','yeah','i think so','miss it','really useful','really useful','i do ']
+    useless=['useless',"nope",'no use',"i don't",'i do not','never','deceitful']
+    
+    
+    return useful,useless

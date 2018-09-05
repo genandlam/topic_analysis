@@ -86,7 +86,7 @@ def topic_selection(transcript):
     feeling_depressed=['really happy','behaviour',' disturbing thought','feel_lately']
     failure=['regret','guilty','proud','being_parent','best_quality']
     personality=['introvert','shyoutgoing']
-    dignose=['ptsd','depression','therapy']
+    dignose=['ptsd','depression','therapy is useful']
     parent=['hard_parent','best_parent','easy_parent','your_kid','differnet_parent']
     
     

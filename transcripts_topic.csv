@@ -33,8 +33,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 1185.905	1186.575	Participant	that	5.0	do you feel like therapy is useful	2.0	305	1
 1188.385	1189.875	Participant	people have been deceitful	5.0	do you feel like therapy is useful	2.0	305	1
 1207.675	1210.655	Participant	uh i've been diagnosed with uh bipolarism	5.0	have you been diagnosed with depression	1.0	305	1
-1501.245	1505.055	Participant	well i don't go anymore uh so um	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	305	1
-1505.605	1507.935	Participant	i kinda miss it you know like i said uh	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	305	1
 1550.495	1552.685	Participant	how does my friends describe me	0.0	how would your best friend describe you	5.0	305	1
 102.892	104.342	Participant	uh i like traveling by train	0.0	what do you enjoy about traveling	1.0	310	1
 105.26	106.02	Participant	it's not my favorite thing	0.0	what do you enjoy about traveling	1.0	310	1
@@ -74,7 +72,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 423.18	423.77	Participant	hmm	2.0	when was the last time you felt really happy	0.0	313	1
 428.925	431.335	Participant	uh maybe like	2.0	when was the last time you felt really happy	0.0	313	1
 478.47	479.71	Participant	uh yeah awhile ago	5.0	have you been diagnosed with depression	1.0	313	1
-518.235	519.045	Participant	oh yeah definitely	5.0	do you feel like therapy's useful	2.0	313	1
 601.265	602.185	Participant	uh	3.0	what are you most proud of in your life	2.0	313	1
 602.895	604.505	Participant	being able to	3.0	what are you most proud of in your life	2.0	313	1
 619.975	621.475	Participant	yeah lots of stuff	3.0	is there anything you regret	0.0	313	1
@@ -105,9 +102,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 338.41	339.49	Participant	uh s	0.0	what do you enjoy about traveling	1.0	316	1
 340.29	344.48	Participant	being in a different environment learning different cultures meeting people 	0.0	what do you enjoy about traveling	1.0	316	1
 388.36	388.79	Participant	yes	5.0	have you been diagnosed with depression	1.0	316	1
-532.11	534.91	Participant	i push myself farther to get out of the house	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	316	1
-536.7	537.91	Participant	or to try to enjoy life	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	316	1
-546.16	546.52	Participant	yes	5.0	do you still go to therapy now	2.0	316	1
 562.23	564.22	Participant	when my uh nephew called me	2.0	when was the last time you felt really happy	0.0	316	1
 566.12	569.1	Participant	scrubbed_entry	2.0	when was the last time you felt really happy	0.0	316	1
 584.27	586.33	Participant	uh that i i'm a pretty good person	3.0	what are you most proud of in your life	2.0	316	1
@@ -126,10 +120,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 192.48	198.07	Participant	a change of pace new environment and um relaxation and escape from 	0.0	what do you enjoy about traveling 	1.0	317	1
 245.73	248.32	Participant	um i'd yes i'd say yes 	4.0	do you consider yourself an introvert  	0.0	317	1
 249.74	250.49	Participant	most of the time 	4.0	do you consider yourself an introvert  	0.0	317	1
-415.14	415.77	Participant	yes 	5.0	do you feel like therapy's useful 	2.0	317	1
-419.64	420.11	Participant	yes	5.0	do you still go to therapy now 	2.0	317	1
-426.43	430.2	Participant	uh i've been more confident a little more at ease with myself  	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	317	1
-433.142	433.761	Participant	less anxious 	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	317	1
 436.25	436.92	Participant	yes	5.0	have you been diagnosed with depression	1.0	317	1
 489.37	490.47	Participant	<cough> um 	0.0	how would your best friend describe you 	5.0	317	1
 493.15	498.0	Participant	i guess easy-going and um likes to have fun sometimes  	0.0	how would your best friend describe you 	5.0	317	1
@@ -153,10 +143,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 504.87	511.06	Participant	mm i don't know that's a tough one to to answer what am i most proud of 	3.0	what are you most proud of in your life 	2.0	318	1
 511.96	512.95	Participant	i don't know honestly 	3.0	what are you most proud of in your life 	2.0	318	1
 364.94	365.38	Participant	yes	5.0	have you been diagnosed with depression	1.0	319	1
-417.96	419.51	Participant	yes i do once a month	5.0	do you still go to therapy now	2.0	319	1
-423.51	424.98	Participant	yeah i do i do	5.0	do you feel like therapy's useful	2.0	319	1
-449.59	451.1	Participant	well i i think um 	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	319	1
-455.2	457.43	Participant	that's a hard question let's move on please	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	319	1
 462.9	463.51	Participant	irritable	1.0	what are you like when you don't sleep well	1.0	319	1
 464.66	465.14	Participant	cranky 	1.0	what are you like when you don't sleep well	1.0	319	1
 477.55	482.45	Participant	<sigh> ooh that's a good question it's been awhile i'd say	2.0	when was the last time you felt really happy	0.0	319	1
@@ -173,14 +159,10 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 435.817	436.557	Participant	excuse me	1.0	what are you like when you don't sleep well	1.0	320	0
 440.407	442.267	Participant	i don't know maybe sluggish	1.0	what are you like when you don't sleep well	1.0	320	0
 443.942	448.847	Participant	maybe sometimes i can be more irritable if i don't sleep well i don't sleep well that often	1.0	what are you like when you don't sleep well	1.0	320	0
-473.792	474.212	Participant	no	5.0	do you still go to therapy now	2.0	320	0
-475.667	477.417	Participant	but i'm gonna go back	5.0	do you still go to therapy now	2.0	320	0
 521.249	522.379	Participant	as far as what	2.0	do you have disturbing thoughts	2.0	320	0
 524.109	525.719	Participant	disturbing thoughts like what	2.0	do you have disturbing thoughts	2.0	320	0
 565.849	566.499	Participant	excuse me	5.0	do you feel like therapy is useful	2.0	320	0
 570.049	571.179	Participant	therapy is what	5.0	do you feel like therapy is useful	2.0	320	0
-576.939	580.999	Participant	i haven't been to therapy in a while but i've noticed how to calm myself down	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	320	0
-582.604	585.164	Participant	when i get um afraid and	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	320	0
 639.039	640.359	Participant	cooking the other day	0.0	tell me about something you did recently that you really enjoyed	0.0	320	0
 642.164	642.794	Participant	cooking	0.0	tell me about something you did recently that you really enjoyed	0.0	320	0
 650.949	651.849	Participant	my son	3.0	what are you most proud of in your life	2.0	320	0
@@ -193,11 +175,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 446.695	447.655	Participant	um groggy	1.0	what are you like when you don't sleep well	1.0	321	0
 448.52	449.87	Participant	and i have no energy	1.0	what are you like when you don't sleep well	1.0	321	0
 469.33	471.31	Participant	um yes i do mhm	2.0	do you have disturbing thoughts	2.0	321	0
-480.89	482.66	Participant	no i'm not in therapy right now	5.0	do you still go to therapy now	2.0	321	0
-494.455	495.175	Participant	i'm sorry what	5.0	do you feel like therapy's useful	2.0	321	0
-500.315	501.005	Participant	i'm not sure	5.0	do you feel like therapy's useful	2.0	321	0
-506.435	506.715	Participant	yeah	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	321	0
-510.02	510.6	Participant	um	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	321	0
 539.505	540.205	Participant	my children	3.0	what are you most proud of in your life	2.0	321	0
 559.265	559.755	Participant	friendly	0.0	how would your best friend describe you	5.0	321	0
 634.13	638.87	Participant	i regret not spending enough time on my education 	3.0	is there anything you regret	0.0	321	0
@@ -212,7 +189,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 427.97	428.68	Participant	um	3.0	is there anything you regret	0.0	322	1
 429.205	430.485	Participant	no not at this time	3.0	is there anything you regret	0.0	322	1
 465.475	466.175	Participant	uh yes	5.0	have you been diagnosed with depression	1.0	322	1
-532.925	533.465	Participant	no i don't	5.0	do you still go to therapy now	2.0	322	1
 577.89	583.795	Participant	uh it's a little difficult but uh of late i've been able to sleep uh within half an hour 	1.0	how easy is it for you to get a good night's sleep	0.0	322	1
 584.505	589.21	Participant	there are days when it takes almost one two hours to uh go to sleep	1.0	how easy is it for you to get a good night's sleep	0.0	322	1
 604.46	606.32	Participant	i just uh you know uh	1.0	what are you like when you don't sleep well	1.0	322	1
@@ -227,8 +203,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 183.4	185.38	Participant	probably just take a trip get out	0.0	what do you enjoy about traveling	1.0	324	1
 186.395	187.805	Participant	get away from the city for a minute	0.0	what do you enjoy about traveling	1.0	324	1
 330.795	333.915	Participant	i think when i was a youngster like a teenager	5.0	have you been diagnosed with depression	1.0	324	1
-337.7	339.14	Participant	fourteen fifteen	5.0	do you still go to therapy now	2.0	324	1
-339.395	339.705	Participant	no	5.0	do you still go to therapy now	2.0	324	1
 365.5	366.47	Participant	excuse me	5.0	do you feel like therapy is useful	2.0	324	1
 505.82	507.42	Participant	um my best friend	0.0	how would your best friend describe you	5.0	324	1
 510.165	511.285	Participant	my best friends	0.0	how would your best friend describe you	5.0	324	1
@@ -248,8 +222,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 379.72	385.25	Participant	i think i'm just proud of who i am xxx i don't know if that's the answer that most people give but i think that i'm	3.0	what are you most proud of in your life	2.0	325	0
 385.92	395.73	Participant	i'm really proud of who i am i try really hard um i've done a lot of things in my life i'm a really good person i think it's it's kind of rare to find people that are kind and i consider myself 	3.0	what are you most proud of in your life	2.0	325	0
 415.67	416.0	Participant	yes	5.0	have you been diagnosed with depression	1.0	325	0
-460.71	471.24	Participant	i haven't for about three years uh i stopped because it felt like uh i was checking in with a parole officer i just wasn't enjoying the relationship i had but i still have the psychiatrist that i go to for med checks 	5.0	do you still go to therapy now	2.0	325	0
-478.72	490.03	Participant	uh i do think it's useful if you have the right therapist i think if you don't have a good relationship with your therapist it can be incredibly harmful i have talked to people that have had bad experiences and and won't ever go back	5.0	do you feel like therapy's useful	2.0	325	0
 540.25	546.87	Participant	almost impossible ever since i was a little kid i had a i had trouble falling asleep and um	1.0	how easy is it for you to get a good night's sleep	0.0	325	0
 547.55	553.65	Participant	about four years ago it it became really really bad where i just couldn't sleep through the night i was getting about four hours of sleep 	1.0	how easy is it for you to get a good night's sleep	0.0	325	0
 567.78	575.86	Participant	um have you ever seen fight club um you're a virtual human so you probably haven't seen that but it's it's pretty much like that i	1.0	what are you like when you don't sleep well	1.0	325	0
@@ -281,8 +253,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 166.15	167.0	Participant	um	4.0	do you consider yourself an introvert	0.0	327	0
 167.61	167.98	Participant	no	4.0	do you consider yourself an introvert	0.0	327	0
 181.66	185.06	Participant	uh walk along the beach uh bike riding	0.0	what are some things you like to do for fun	4.0	327	0
-369.284	369.794	Participant	yes	5.0	do you feel like therapy's useful	2.0	327	0
-437.241	437.781	Participant	yes	5.0	do you still go to therapy now	2.0	327	0
 442.561	443.081	Participant	it's not	1.0	how easy is it for you to get a good night's sleep	0.0	327	0
 443.791	447.281	Participant	it's about fifty fifty some nights i sleep good and some nights i don't	1.0	how easy is it for you to get a good night's sleep	0.0	327	0
 453.18	453.83	Participant	um 	1.0	what are you like when you don't sleep well 	1.0	327	0
@@ -363,7 +333,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 132.73	133.25	Participant	yes 	4.0	do you consider yourself an introvert 	0.0	338	0
 201.31	208.62	Participant	wow it's a lot of things i regret but it's not anything that i can control probably the biggest regret was losing my mother 	3.0	is there anything you regret 	0.0	338	0
 269.58	270.07	Participant	yes 	5.0	have you been diagnosed with depression 	1.0	338	0
-292.74	293.3	Participant	no i don't 	5.0	do you still go to therapy now	2.0	338	0
 383.8	392.01	Participant	um today i got to see my best friend after a long time so i mean happiness comes and goes but i felt happy today 	2.0	when was the last time you felt really happy 	0.0	338	0
 397.18	400.23	Participant	wow he would say really silly um 	0.0	how would your best friend describe you 	5.0	338	0
 401.62	411.33	Participant	but still when i'm around him i try to be happy i try to present a a a situation where we're both gonna be happy no one wants to be around a depressed person 	0.0	how would your best friend describe you 	5.0	338	0
@@ -375,9 +344,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 294.599	294.86	Participant	no	3.0	is there anything you regret	0.0	339	1
 325.64	329.03	Participant	um a good listener patient	0.0	how would your best friend describe you	5.0	339	1
 329.97	330.56	Participant	um	0.0	how would your best friend describe you	5.0	339	1
-441.145	441.54	Participant	i do	5.0	do you still go to therapy now	2.0	339	1
-452.99	453.95	Participant	i	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	339	1
-454.95	456.25	Participant	don't worry as much	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	339	1
 552.573	559.05	Participant	it depends um if i'm really busy during the week and have a lot of things to do	1.0	how easy is it for you to get a good night's sleep	0.0	339	1
 560.14	568.91	Participant	i often try to plan things and if i'm planning things it affects my sleep i might wake up in the middle of the night so	1.0	how easy is it for you to get a good night's sleep	0.0	339	1
 576.51	578.41	Participant	irritable um	1.0	what are you like when you don't sleep well	1.0	339	1
@@ -421,8 +387,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 627.67	629.39	Participant	oh i don't sleep that good	1.0	how easy is it for you to get a good night's sleep	0.0	343	1
 639.01	640.72	Ellie	what are you like when you don't sleep well	1.0	how easy is it for you to get a good night's sleep	0.0	343	1
 646.02	647.3	Participant	um i don't know	1.0	what are you like when you don't sleep well	1.0	343	1
-654.23	654.52	Participant	no	5.0	do you still go to therapy now	2.0	343	1
-655.81	656.28	Participant	i never	5.0	do you still go to therapy now	2.0	343	1
 669.38	670.91	Participant	i don't have a best friend	0.0	how would your best friend describe you	5.0	343	1
 671.56	672.28	Participant	i have a	0.0	how would your best friend describe you	5.0	343	1
 714.98	717.05	Participant	just hanging out with uh a friend	0.0	tell me about something you did recently that you really enjoyed	0.0	343	1
@@ -436,8 +400,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 523.18	524.47	Participant	this morning <laughter> 	2.0	when was the last time you felt really happy 	0.0	344	1
 658.92	660.28	Participant	it's very seldom 	1.0	how easy is it for you to get a good night's sleep 	0.0	344	1
 661.19	666.69	Participant	uh i suffer from p_t_s_d and uh getting that type of sleep	1.0	how easy is it for you to get a good night's sleep 	0.0	344	1
-756.85	759.25	Participant	'cause i'm able to sit down and talk to the therapist 	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	344	1
-760.34	766.25	Participant	well i'm able to sit down and talk to the therapist and uh tell 'em my situation and we usually will go over the problem	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	344	1
 781.99	782.67	Participant	it's a good thing	2.0	do you have disturbing thoughts	2.0	344	1
 783.9	784.63	Participant	excuse me ma'am	2.0	do you have disturbing thoughts	2.0	344	1
 788.61	788.86	Participant	no	2.0	do you have disturbing thoughts	2.0	344	1
@@ -462,8 +424,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 440.6	441.13	Participant	thanks	1.0	what are you like when you don't sleep well 	1.0	345	0
 444.03	451.16	Participant	when i don't sleep well um well i start to like cry a lot and i start to get really irritable	1.0	what are you like when you don't sleep well 	1.0	345	0
 554.71	558.05	Participant	um yeah i have depression um yeah 	5.0	have you been diagnosed with depression 	1.0	345	0
-581.14	585.91	Participant	um i noticed that i've had less flashbacks and um	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	345	0
-586.5	591.22	Participant	i've been more relaxed i guess and um	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	345	0
 602.86	605.9	Participant	um the last time i felt really happy um	2.0	when was the last time you felt really happy 	0.0	345	0
 607.19	609.29	Participant	i guess um	2.0	when was the last time you felt really happy 	0.0	345	0
 622.35	624.56	Participant	um most proud of uh	3.0	what are you most proud of in your life 	2.0	345	0
@@ -487,9 +447,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 320.39	321.32	Participant	not for a while	2.0	when was the last time you felt really happy 	0.0	348	0
 322.23	323.13	Participant	maybe a month ago 	2.0	when was the last time you felt really happy 	0.0	348	0
 374.46	374.91	Participant	yes	5.0	have you been diagnosed with depression 	1.0	348	0
-407.32	408.22	Participant	therapy yes	5.0	do you feel like therapy's useful 	2.0	348	0
-411.19	411.51	Participant	i do	5.0	do you still go to therapy now	2.0	348	0
-416.34	423.55	Participant	well not that many changes <cha> i still don't feel that great but i just it's good to talk to someone and tell them how you feel 	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	348	0
 465.02	466.28	Participant	terrible i don't sleep 	1.0	how easy is it for you to get a good night's sleep 	0.0	348	0
 472.36	474.19	Participant	oh crazy distracted	1.0	what are you like when you don't sleep well 	1.0	348	0
 475.37	475.71	Participant	just	1.0	what are you like when you don't sleep well 	1.0	348	0
@@ -505,9 +462,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 191.06	193.12	Participant	occasionally yes <laughter>	4.0	do you consider yourself an introvert 	0.0	350	0
 313.74	320.86	Participant	uh i think i'm very close to my family we're a pretty close knit family talk every day um see each other almost every day 	0.0	how close are you to your family 	3.0	350	0
 404.96	405.49	Participant	i have 	5.0	have you been diagnosed with depression 	1.0	350	0
-513.0	513.35	Participant	no 	5.0	do you still go to therapy now 	2.0	350	0
-548.32	548.77	Participant	i do 	5.0	do you feel like therapy's useful 	2.0	350	0
-549.48	550.27	Participant	yes it is	5.0	do you feel like therapy's useful 	2.0	350	0
 555.93	562.05	Participant	it's kinda difficult um i either have a hard time falling asleep or a hard time staying asleep	1.0	how easy is it for you to get a good night's sleep 	0.0	350	0
 604.11	605.2	Participant	tired <laughter> 	1.0	what are you like when you don't sleep well 	1.0	350	0
 607.01	609.58	Participant	yeah mostly uh tired um	1.0	what are you like when you don't sleep well 	1.0	350	0
@@ -525,11 +479,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 303.72	304.34	Participant	um	0.0	how would your best friend describe you	5.0	351	0
 305.32	306.09	Participant	probably	0.0	how would your best friend describe you	5.0	351	0
 330.07	330.61	Participant	yes	5.0	have you been diagnosed with depression	1.0	351	0
-363.9	367.38	Participant	um not currently i i did about like six months ago	5.0	do you still go to therapy now	2.0	351	0
 390.1	392.78	Participant	um yes i do actually um 	5.0	do you feel like therapy is useful	2.0	351	0
 393.69	405.16	Participant	when i feel connected to a therapist um and when i feel like it's a really great way for me to talk about what i'm going through um so yes i do	5.0	do you feel like therapy is useful	2.0	351	0
-408.79	409.35	Participant	um	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	351	0
-410.0	414.81	Participant	i'm better at describing my emotions and feelings i think the biggest thing is um	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	351	0
 530.84	538.05	Participant	um <clears throat> some days it's great some days it's not um more recently it's been a little bit more difficult	1.0	how easy is it for you to get a good night's sleep	0.0	351	0
 553.25	556.47	Participant	um <clears throat> very groggy in the morning and um	1.0	what are you like when you don't sleep well	1.0	351	0
 557.58	568.87	Participant	that's about it like during the day i tend to yawn a lot and my friends always are like oh why are you yawning so much are you disinterested <disisinterested> in what we're doing and then trying to tell them it's not that at all <laughter>	1.0	what are you like when you don't sleep well	1.0	351	0
@@ -558,7 +509,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 691.31	694.12	Participant	let's see that's kind of hard <laughter> 	0.0	tell me about something you did recently that you really enjoyed 	0.0	352	0
 177.59	178.68	Participant	um sometimes 	4.0	do you consider yourself an introvert  	0.0	353	0
 266.42	268.72	Participant	i have no idea <laughter> 	0.0	how would your best friend describe you 	5.0	353	0
-447.79	448.22	Participant	i do 	5.0	do you still go to therapy now 	2.0	353	0
 489.25	499.13	Participant	um it's gotten better i'm okay <ok> i'm better now um the first three months it was very difficult i couldn't sleep through the night and i woke maybe two or three times and would be awake for a couple hours	1.0	how easy is it for you to get a good night's sleep 	0.0	353	0
 499.8	502.71	Participant	but now i am um sleeping through the night again 	1.0	how easy is it for you to get a good night's sleep 	0.0	353	0
 508.98	511.85	Participant	um i feel <f> groggy <sigh>	1.0	what are you like when you don't sleep well 	1.0	353	0
@@ -577,7 +527,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 223.21	226.28	Participant	uh i'm kind of on the outs with my parents 	0.0	how close are you to your family 	3.0	355	1
 322.938	323.658	Participant	i was	5.0	have you been diagnosed with depression 	1.0	355	1
 324.708	330.65	Participant	diagnosed with depression after a hospital visit in april of two thousand eleven   	5.0	have you been diagnosed with depression 	1.0	355	1
-340.7	340.99	Participant	no	5.0	do you still go to therapy now	2.0	355	1
 413.44	414.22	Participant	very easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	355	1
 416.2	421.15	Participant	'cause now i'm old when i was young i couldn't sleep more than six <s> four six hours a night 	1.0	how easy is it for you to get a good night's sleep 	0.0	355	1
 458.17	460.31	Participant	i don't know probably uh 	2.0	when was the last time you felt really happy 	0.0	355	1
@@ -592,9 +541,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 235.12	239.46	Participant	uh fairly close but they most of them live around l_a	0.0	how close are you to your family 	3.0	356	1
 240.5	242.3	Participant	uh there's a few that are from far <f>	0.0	how close are you to your family 	3.0	356	1
 516.24	516.68	Participant	yes 	5.0	have you been diagnosed with depression 	1.0	356	1
-587.42	587.8	Participant	no	5.0	do you still go to therapy now 	2.0	356	1
-619.49	620.02	Participant	um	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	356	1
-621.1	625.69	Participant	i think therapy makes you see what the um 	5.0	what sort of changes have you noticed since you've been going to therapy	2.0	356	1
 783.01	785.57	Participant	oh you mean in life in general yeah well	3.0	is there anything you regret 	0.0	356	1
 786.72	790.99	Participant	i think i regret not finishing college i think i had a i think i was <wa>	3.0	is there anything you regret 	0.0	356	1
 893.69	895.62	Participant	um let's see 	0.0	tell me about something you did recently that you really enjoyed 	0.0	356	1
@@ -624,8 +570,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 298.531	301.291	Participant	um more towards my sisters not my parents	0.0	how close are you to your family 	3.0	358	1
 302.251	303.981	Participant	i'm not close at all with my parents	0.0	how close are you to your family 	3.0	358	1
 331.84	332.371	Participant	yes 	5.0	have you been diagnosed with depression 	1.0	358	1
-375.079	375.407	Participant	no	5.0	do you still go to therapy now 	2.0	358	1
-383.224	383.644	Participant	yes	5.0	do you feel like therapy's useful 	2.0	358	1
 400.384	400.994	Participant	not easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	358	1
 407.292	408.946	Participant	airheaded spacey 	1.0	what are you like when you don't sleep well	1.0	358	1
 410.088	410.716	Participant	um 	1.0	what are you like when you don't sleep well	1.0	358	1
@@ -654,10 +598,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 177.99	180.65	Participant	i'm very close to my children and my father 	0.0	how close are you to your family 	3.0	362	0
 264.46	268.42	Participant	i'm a good friend i'm a true friend i'm honest i'm real	0.0	how would your best friend describe you 	5.0	362	0
 269.2	270.21	Participant	i'm dependable	0.0	how would your best friend describe you 	5.0	362	0
-312.18	312.58	Participant	i do 	5.0	do you still go to therapy now 	2.0	362	0
-317.09	324.31	Participant	i think therapy has helped me tremendously i don't think i'd be able to hold a job and be responsible and	5.0	do you feel like therapy's useful 	2.0	362	0
-325.26	325.76	Participant	be  	5.0	do you feel like therapy's useful 	2.0	362	0
-335.32	347.69	Participant	i'm able to handle things better i don't get so um emotionally upset um a lot more rational i try to stay more rational than emotional more rational and logical 	5.0	what sort of changes have you noticed since you've been going to therapy 	2.0	362	0
 389.25	392.34	Participant	it's not it's never easy it's always bad 	1.0	how easy is it for you to get a good night's sleep 	0.0	362	0
 396.14	398.03	Participant	tired lethargic	1.0	what are you like when you don't sleep well 	1.0	362	0
 398.86	403.61	Participant	um it's hard to keep my thoughts in order it's hard just to do the basics during the day  	1.0	what are you like when you don't sleep well 	1.0	362	0
@@ -698,8 +638,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 1361.961	1362.851	Participant	and	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	364	1
 1377.236	1379.666	Participant	i do i was really against it in the past	5.0	therapy_useful (do you feel like therapy is useful)	2.0	364	1
 1380.266	1385.091	Participant	and until after i went i mean i wish i went more say during my uh	5.0	therapy_useful (do you feel like therapy is useful)	2.0	364	1
-1436.441	1443.246	Participant	uh i don't go now i'm sorta taking a break from it but i'm not against it if i have some issues i wanna bounce off	5.0	therapy_going (do you still go to therapy now)	2.0	364	1
-1443.621	1445.371	Participant	i do have someone that i go to	5.0	therapy_going (do you still go to therapy now)	2.0	364	1
 1516.635	1517.815	Participant	uh this morning	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	364	1
 1518.13	1523.125	Participant	i know this this is weird but i'm clearly someone and i'd say this as a joke to my friends and	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	364	1
 1559.545	1565.725	Participant	uh most of my friends i'm sort of a renaissance man i know a little bit about a lot of subjects	0.0	BF_describe (how would your best friend describe you)	5.0	364	1
@@ -820,7 +758,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 858.06	860.07	Participant	i take i take benadryl to help me sleep	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	372	0
 967.15	970.38	Participant	i'm pretty depressed i'm on anti-depressants	2.0	feel_lately (how have you been feeling lately)	3.0	372	0
 971.78	972.3	Participant	um	2.0	feel_lately (how have you been feeling lately)	3.0	372	0
-1146.71	1148.62	Participant	yes i do i try	5.0	therapy_going (do you still go to therapy now)	2.0	372	0
 1154.68	1156.42	Participant	do i feel like the therapy's useful	5.0	therapy_useful (do you feel like therapy is useful)	2.0	372	0
 1157.54	1158.0	Participant	um	5.0	therapy_useful (do you feel like therapy is useful)	2.0	372	0
 1258.83	1259.87	Participant	everything's always	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	372	0
@@ -843,11 +780,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 642.18	649.86	Participant	cranky <laughter> i value good sleep <laughter> and i'm so i'm used to it so it's just yeah it's not a good	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	374	0
 650.36	650.84	Participant	feeling	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	374	0
 667.24	667.714	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	374	0
-739.764	740.274	Participant	yes	5.0	therapy_going (do you still go to therapy now)	2.0	374	0
 744.794	746.174	Participant	yes um	5.0	therapy_useful (do you feel like therapy is useful)	2.0	374	0
 746.6	749.83	Participant	<laughter> sometimes more than others but yeah overall i would say so	5.0	therapy_useful (do you feel like therapy is useful)	2.0	374	0
-755.194	757.304	Participant	<deep breath> i think that therapy	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	374	0
-757.76	760.47	Participant	is good for me because it	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	374	0
 814.634	819.284	Participant	<deep breath> <sigh> hmm <sigh> um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	374	0
 827.464	829.404	Participant	i don't know um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	374	0
 910.66	912.82	Participant	um <sigh>	0.0	BF_describe (how would your best friend describe you)	5.0	374	0
@@ -878,8 +812,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 493.69	496.83	Participant	um well i've been i've been depressed	2.0	feel_lately (how have you been feeling lately)	3.0	376	0
 497.515	498.752	Participant	for quite some time	2.0	feel_lately (how have you been feeling lately)	3.0	376	0
 559.715	565.789	Participant	yes i have a uh psychiatrist that prescribes me medication on a regular basis	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	376	0
-664.984	665.568	Participant	um	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	376	0
-665.9	669.989	Participant	like i said i haven't been going to therapy recently just psychiatrist just medication	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	376	0
 708.115	708.885	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	376	0
 715.136	716.142	Participant	uh <sigh>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	376	0
 726.921	729.257	Participant	i'm not a parent anymore he passed away	6.0	easy_parent (do you find it easy to be a parent)	2.0	376	0
@@ -1102,7 +1034,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 468.14	470.06	Participant	better than i have in a long time	2.0	feel_lately (how have you been feeling lately)	3.0	400	1
 522.13	522.68	Participant	nope	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	400	1
 526.0	527.74	Participant	yes to some extent	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	400	1
-568.78	569.27	Participant	no	5.0	therapy_going (do you still go to therapy now)	2.0	400	1
 602.6	602.99	Participant	yes	5.0	therapy_useful (do you feel like therapy is useful)	2.0	400	1
 642.58	644.02	Participant	last night um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	400	1
 644.48	646.82	Participant	i made a really great vegan uh	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	400	1
@@ -1143,7 +1074,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 410.83	415.36	Participant	i have a history of chronic insomnia and some health problems so	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	402	0
 424.89	428.35	Participant	in the past week i've been feeling a lot better	2.0	feel_lately (how have you been feeling lately)	3.0	402	0
 501.96	502.47	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	402	0
-543.03	543.73	Participant	no	5.0	therapy_going (do you still go to therapy now)	2.0	402	0
 711.39	717.26	Participant	<laughter> um i went to um	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	402	0
 719.39	721.51	Participant	i went to a music store	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	402	0
 773.09	773.77	Participant	mm	0.0	ideal_weekendC (tell me how you spend your ideal weekend)	6.0	402	0
@@ -1194,7 +1124,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 136.57	137.33	Participant	um	0.0	travel_changed (what do you enjoy about traveling)	1.0	414	0
 256.39	258.27	Participant	i am super outgoing	4.0	shyoutgoing (do you consider yourself more shy or outgoing)	1.0	414	0
 258.53	264.24	Participant	and i love talking to people a lot i like i like being the center of attention usually <laughter>	4.0	shyoutgoing (do you consider yourself more shy or outgoing)	1.0	414	0
-633.35	635.96	Participant	i do i go once a week	5.0	therapy_going (do you still go to therapy now)	2.0	414	0
 639.84	642.81	Participant	i feel like if you have the right therapist	5.0	therapy_useful (do you feel like therapy is useful)	2.0	414	0
 643.11	644.29	Participant	it's really useful	5.0	therapy_useful (do you feel like therapy is useful)	2.0	414	0
 675.55	677.42	Participant	not that easy at all	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	414	0
@@ -1285,7 +1214,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 647.12	648.47	Participant	um	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	423	0
 648.79	650.07	Participant	in the past	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	423	0
 735.58	741.1	Participant	um i think through finding p_t_s_d they were trying to link depression	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	423	0
-745.14	745.69	Participant	no	5.0	therapy_going (do you still go to therapy now)	2.0	423	0
 788.64	789.92	Participant	mm	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	423	0
 791.4	793.47	Participant	last time i felt really happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	423	0
 809.91	811.16	Participant	um	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	423	0
@@ -1301,10 +1229,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 818.58	825.59	Participant	i've been feeling kind of tired and low level depressed and like not feeling a lot of options	2.0	feel_lately (how have you been feeling lately)	3.0	425	0
 829.74	830.04	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	425	0
 832.75	833.61	Participant	yes i have	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	425	0
-890.99	892.61	Participant	i'm not going to therapy right now	5.0	therapy_going (do you still go to therapy now)	2.0	425	0
 908.05	910.67	Participant	i feel like therapy can be useful yes	5.0	therapy_useful (do you feel like therapy is useful)	2.0	425	0
-916.27	919.12	Participant	well when i went to therapy um	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	425	0
-920.94	924.4	Participant	it was helpful to have somebody who listened and	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	425	0
 938.02	939.44	Participant	<deep breath>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	425	0
 939.91	941.97	Participant	um <sigh>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	425	0
 1090.27	1098.78	Participant	um proud of uh my children and i'm proud of the friendships i have	3.0	Ellie17Dec2012_08 (what are you most proud of in your life)	2.0	425	0
@@ -1318,10 +1243,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 510.57	511.3	Participant	it's not easy	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	426	1
 544.67	545.48	Participant	not good at all	2.0	feel_lately (how have you been feeling lately)	3.0	426	1
 589.03	589.47	Participant	yes	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	426	1
-626.81	627.14	Participant	yes	5.0	therapy_going (do you still go to therapy now)	2.0	426	1
 631.8	633.65	Participant	yes i do actually i do	5.0	therapy_useful (do you feel like therapy is useful)	2.0	426	1
-639.33	639.98	Participant	mm	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	426	1
-640.85	641.79	Participant	better decision making	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	426	1
 690.73	691.2	Participant	<laughter>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	426	1
 692.87	693.5	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	426	1
 707.27	708.06	Participant	oh my goodness	0.0	BF_describe (how would your best friend describe you)	5.0	426	1
@@ -1411,10 +1333,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 528.97	529.41	Participant	i feel good	2.0	feel_lately (how have you been feeling lately)	3.0	430	1
 547.07	547.83	Participant	no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	430	1
 550.55	551.16	Participant	yes i have	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	430	1
-612.93	613.3	Participant	i do	5.0	therapy_going (do you still go to therapy now)	2.0	430	1
 617.54	618.45	Participant	i'm sorry say again	5.0	therapy_useful (do you feel like therapy is useful)	2.0	430	1
-629.05	630.68	Participant	well um <sigh>	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	430	1
-632.91	639.21	Participant	i think the number one thing and this is what i'm amazed about is the temper i think i've uh it's allowed me to	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	430	1
 673.27	676.98	Participant	when i was five years old <laughter>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	430	1
 695.16	695.93	Participant	my best friend	0.0	BF_describe (how would your best friend describe you)	5.0	430	1
 697.61	698.25	Participant	um	0.0	BF_describe (how would your best friend describe you)	5.0	430	1
@@ -1499,10 +1418,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 645.38	646.05	Participant	irrational	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	441	0
 649.63	650.16	Participant	tired	2.0	feel_lately (how have you been feeling lately)	3.0	441	0
 653.39	655.33	Participant	sick of the world angry at the world	2.0	feel_lately (how have you been feeling lately)	3.0	441	0
-677.53	678.04	Participant	yes	5.0	therapy_going (do you still go to therapy now)	2.0	441	0
 682.93	684.89	Participant	oh yeah <laughter> oh yeah	5.0	therapy_useful (do you feel like therapy is useful)	2.0	441	0
-692.01	696.42	Participant	well i i could recognize a trigger now when something is gonna trigger me i can at least	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	441	0
-697.55	697.97	Participant	know	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	441	0
 713.67	716.15	Participant	when i saw my grandchildren when they came to visit	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	441	0
 740.8	741.37	Participant	<sniff>	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	441	0
 743.28	746.55	Participant	planting seeds for some vegetables making a garden	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	441	0
@@ -1627,8 +1543,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 701.01	701.15	Participant	how <h	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	448	1
 703.06	704.49	Participant	no no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	448	1
 707.67	708.18	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	448	1
-750.65	753.23	Participant	uh well <w> well you know it's not really therapy it's	5.0	therapy_going (do you still go to therapy now)	2.0	448	1
-753.61	757.95	Participant	<clears throat> you know every uh few months you know you gotta see the doctor	5.0	therapy_going (do you still go to therapy now)	2.0	448	1
 800.18	801.35	Participant	<sigh>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	448	1
 802.82	804.92	Participant	last time i felt real happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	448	1
 857.88	860.3	Participant	well um <sniff>	0.0	BF_describe (how would your best friend describe you)	5.0	448	1
@@ -1744,9 +1658,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 613.795	614.225	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	459	1
 615.2	615.52	Participant	but	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	459	1
 616.96	617.57	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	459	1
-646.34	646.72	Participant	no	5.0	therapy_going (do you still go to therapy now)	2.0	459	1
-666.59	668.56	Participant	i'm learned coping skills	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	459	1
-670.37	671.24	Participant	so i'm able to	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	459	1
 685.5	686.19	Participant	it can be	5.0	therapy_useful (do you feel like therapy is useful)	2.0	459	1
 688.33	690.09	Participant	if the person's willing to change	5.0	therapy_useful (do you feel like therapy is useful)	2.0	459	1
 701.55	702.34	Participant	two days ago	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	459	1
@@ -1917,9 +1828,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 505.712	508.862	Participant	um just <jus> just kind of tired maybe a little bit irritable	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	478	0
 512.82	513.442	Participant	uh good	2.0	feel_lately (how have you been feeling lately)	3.0	478	0
 553.41	555.212	Participant	um in the past but it's treated	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	478	0
-583.56	585.062	Participant	yeah for the p_t_s_d though	5.0	therapy_going (do you still go to therapy now)	2.0	478	0
-590.69	591.61	Participant	um	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	478	0
-593.91	595.072	Participant	i don't know i guess uh	5.0	therapy_changes (what sort of changes have you noticed since you've been going to therapy)	2.0	478	0
 619.431	622.261	Participant	i yeah i have nightmares about my family sometimes	2.0	disturbing_thoughts (do you have disturbing thoughts)	2.0	478	0
 624.025	625.235	Participant	yeah thanks	2.0	disturbing_thoughts (do you have disturbing thoughts)	2.0	478	0
 649.5	657.202	Participant	i feel happy all the time pretty much like i my dogs make me happy and you know my life is really happy so	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	478	0
@@ -2050,7 +1958,6 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 596.15	600.7	Participant	well with all this stuff going on with the last week it's been real real real real real crazy	2.0	feel_lately (how have you been feeling lately)	3.0	491	0
 623.98	624.89	Participant	no never	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	491	0
 627.23	633.26	Participant	yeah when i went through that divorce um and my mother passed that i was really depressed	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	491	0
-672.31	673.67	Participant	no no not at all	5.0	therapy_going (do you still go to therapy now)	2.0	491	0
 681.64	685.39	Participant	yeah i need somebody to talk to <laughter> yes	5.0	therapy_useful (do you feel like therapy is useful)	2.0	491	0
 707.91	709.35	Participant	oh god	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	491	0
 712.63	717.27	Participant	well there's this guy at church and i really like him and he likes me and he throws kisses at me so	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	491	0

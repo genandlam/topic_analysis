@@ -38,8 +38,13 @@ class topic_selection(object):
         
          if self.topic =='dignosis':
             
-              responds=self.dignosis_info(df)   
-              
+             respond_depression, respond_ptsd  =self.dignosis_info(df) 
+             return respond_depression, respond_ptsd 
+         
+         if self.topic =='therapy':
+            
+             responds=self.therapy_info(df) 
+            
              
          return responds
      
@@ -57,18 +62,18 @@ class topic_selection(object):
                     
                     for word_not in not_easy:
                         if word_not in sentence: 
-                            df['yes/no'][index]=0
+                            df['yes/no'][index]=1
                             
                     for word in easy:
                         if word in sentence:
-                            df['yes/no'][index]=1
+                            df['yes/no'][index]=0
                             
                   if df['participant'][index-1]==row.participant and (df['yes/no'][index+1] != 0 or df['yes/no'][index+1]!= 1 ) :
                           df['yes/no'][index-1]=df['yes/no'][index]
                   if row.participant==423:
-                      df['yes/no'][index]=1
+                      df['yes/no'][index]=0
                   if row.participant==441:
-                      df['yes/no'][index]=0    
+                      df['yes/no'][index]=1    
                       
             
     #    sleep=df[(df['topic']== 1)&(df['sub_topic']== 0) & (df['yes/no']!= 1 )&(df['yes/no']!= 0 )] 
@@ -132,48 +137,83 @@ class topic_selection(object):
             
          return respond  
 
-
      def dignosis_info(self,df):
-         # reterns 2 df 
         
          
          for index, row in df.iterrows():
-              if row.topic== 5 & (row.sub_topic!=2 ):
+              if row.topic== 5 and row.sub_topic!=2:
                   sentence=row.value
-                  illness,no_illness=self.dic()
-                  if row.value=='no':
-                      print('yes')
-                      df['yes/no'][index]=0
+                  illness, no_illness=self.dic()
+                  
                   for word_not in no_illness:
-                      if word_not in sentence: 
-                          df['yes/no'][index]=0
+                        if word_not in sentence: 
+                            df['yes/no'][index]=0
+                         
                             
-                                
                   for word in illness:
                         if word in sentence:
-                            df['yes/no'][index]=1
+                            df['yes/no'][index]=1 
+                            
+                  if row.value=='no'or row.value=='no 'or row.value=='nah':
+                             df['yes/no'][index]=0        
+                  if row.value=='i have 'or row.value=='i have':
+                             df['yes/no'][index]=1       
+#                  if index !=0:
+#                      if df['participant'][index-1]==row.participant and (df['yes/no'][index-1] == 0 or df['yes/no'][index-1]== 1 ) :
+#                          df['yes/no'][index]=df['yes/no'][index-1]
+#                          
+#                      if df['participant'][index-1]==row.participant and (df['yes/no'][index+1] != 0 or df['yes/no'][index+1]!= 1 ) :
+#                              df['yes/no'][index-1]=df['yes/no'][index]
+                 
+         dignosis_depression=df[(df['topic']== 5)&(df['sub_topic']== 1)]
+         dignosis_ptsd=df[(df['topic']== 5)&(df['sub_topic']== 0)]
+         #take note depression
+         #333, 352, 423, 478
+         #ptsd
+         #423, 457
+         #remove invalid reply or reply with little info
+         dignosis_ptsd.dropna(inplace=True)          
+         respond_depression =dignosis_depression[["participant",'topic','yes/no','value','topic_value']].copy()
+         respond_ptsd =dignosis_ptsd[["participant",'topic','yes/no','value','topic_value']].copy()
+        
+         
+            
+         return respond_depression, respond_ptsd 
                   
-                  if index !=0: 
-                      if df['participant'][index-1]==row.participant and (df['yes/no'][index-1] == 0 or df['yes/no'][index-1]== 1 ) :
-                          df['yes/no'][index]=df['yes/no'][index-1]
-                          
-                      if df['participant'][index-1]==row.participant and (df['yes/no'][index+1] != 0 or df['yes/no'][index+1]!= 1 ) :
-                              df['yes/no'][index-1]=df['yes/no'][index]
-                              
-                
-
+     def therapy_info(self,df):
+        
+         
+         for index, row in df.iterrows():
+              if row.topic== 5 and row.sub_topic==2:
+                  sentence=row.value
+                  useful,useless=self.dic()
+                  
+                  for word_not in useful:
+                        if word_not in sentence: 
+                            df['yes/no'][index]=0
+                         
+                            
+                  for word in useless:
+                        if word in sentence:
+                            df['yes/no'][index]=1 
+                            
+                  if row.value=='no'or row.value=='no 'or row.value=='nah':
+                             df['yes/no'][index]=1        
                       
-            
-  #       personality=df[(df['topic']== 4) & (df['yes/no']!= 1 )&(df['yes/no']!= 0 )] 
-         dignosis=df[(df['topic']== 5)&(df['sub_topic']!= 2 )]
-#         print(df.dtypes)
-    #   sleep.dropna(inplace=True)          
-         respond =dignosis[["participant",'topic','yes/no','value','topic_value']].copy()
+                             df['yes/no'][index-1]=df['yes/no'][index]
+                  if row.participant==364:
+                      df['yes/no'][index]=0
+         therapy=df[(df['topic']== 5)&(df['sub_topic']== 2)]
         
-         print(respond.shape)
-            
-         return respond                                    
         
+         #remove invalid reply or reply with little info
+         therapy.dropna(inplace=True)          
+         respond =therapy[["participant",'topic','yes/no','value','topic_value']].copy()
+        
+         
+            
+         return respond              
+           
      def dic(self):
          
          if self.topic =='sleep':
@@ -194,6 +234,12 @@ class topic_selection(object):
              
              return illness, no_illness
         
+         if self.topic=='therapy':
+             
+             useful,useless= word_dic.therapy()
+             
+             return useful,useless
+        
         
  
              
@@ -207,15 +253,24 @@ train_dir='transcripts_topic.csv'
 #sleep=topic_selection(topic,sub_topic)
 #sleep_responds=sleep.train_index(train_dir)
 
-     
-
-topic='dignosis'
-sub_topic="therapy"
-dignosis=topic_selection(topic,sub_topic)
-dignose=dignosis.train_index(train_dir)
-
-
+ 
 #topic='personality'
 #sub_topic='null'
 #personality=topic_selection(topic,sub_topic)
-#personality_responds=personality.train_index(train_dir)
+#personality_responds=personality.train_index(train_dir)    
+
+#topic='dignosis'
+#sub_topic="null"
+#dignosis=topic_selection(topic,sub_topic)
+#respond_depression, respond_ptsd  =dignosis.train_index(train_dir)
+
+topic='therapy'
+sub_topic="therapy"
+therapy=topic_selection(topic,sub_topic)
+therapy_respond=therapy.train_index(train_dir)
+
+#topic='feeling_depressed'
+#sub_topic="null"
+#therapy=topic_selection(topic,sub_topic)
+#therapy_respond=therapy.train_index(train_dir)
+
