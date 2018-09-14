@@ -127,7 +127,7 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     
 
     model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3)))
-   
+    model.add(Dropout(0.5))
 
     model.add(Conv2D(32, (1, 5), padding='valid', strides=1,
               input_shape=input_shape, activation='relu',
@@ -148,12 +148,12 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     model.add(Dense(nb_classes))
     model.add(Activation('softmax'))
 
-    adam=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0)
+#    adam=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0)
 #    adamax=optimizers.Adamax(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0)   
-#    sgd_nest=optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=True)
+    sgd_nest=optimizers.SGD(lr=0.01, momentum=0.0, decay=0.01, nesterov=True)
     #adadelta
     model.compile(loss='categorical_crossentropy',
-                  optimizer='adadelta',
+                  optimizer=sgd_nest,
                   metrics=['accuracy'])
 
     history = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs,
@@ -245,7 +245,7 @@ if __name__ == '__main__':
     # CNN parameters
     batch_size = 32
     nb_classes = 2
-    epochs = 7
+    epochs = 8
 
     # normalalize data and prep for Keras
     print('Processing images for Keras...')
