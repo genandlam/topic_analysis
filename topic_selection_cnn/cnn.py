@@ -127,7 +127,7 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     
 
     model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3)))
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.3))
 
     model.add(Conv2D(32, (1, 5), padding='valid', strides=1,
               input_shape=input_shape, activation='relu',
@@ -245,7 +245,7 @@ if __name__ == '__main__':
     # CNN parameters
     batch_size = 32
     nb_classes = 2
-    epochs = 8
+    epochs = 10
 
     # normalalize data and prep for Keras
     print('Processing images for Keras...')
