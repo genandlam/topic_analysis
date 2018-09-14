@@ -83,7 +83,7 @@ def data_retrieve(working_dir,train_id):
 def topic_selection(transcript):    
     interest=['recently that you really enjoy','traveling','travel alot','family','fun','best friend','weekend']
     sleep=["good night's sleep", "don't sleep well"]
-    feeling_depressed=['really happy','behaviour',' disturbing thought','feel_lately']
+    feeling_depressed=['really happy','behavior',' disturbing thought','feel_lately']
     failure=['regret','guilty','proud','being_parent','best_quality']
     personality=['introvert','shyoutgoing']
     dignose=['ptsd','depression','therapy is useful']

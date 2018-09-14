@@ -40,6 +40,9 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 306.232	306.642	Participant	not at all	0.0	how close are you to your family	3.0	310	1
 479.54	480.21	Participant	<clears throat>	5.0	have you been diagnosed with depression	1.0	310	1
 480.42	480.63	Participant	no	5.0	have you been diagnosed with depression	1.0	310	1
+485.73	486.66	Participant	i'm sorry you repeat that	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	310	1
+493.92	494.95	Participant	no not necessarily	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	310	1
+495.85	496.34	Participant	<clears throat>	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	310	1
 500.645	501.545	Participant	very i'm a heavy sleeper	1.0	how easy is it for you to get a good night's sleep	0.0	310	1
 542.32	542.92	Participant	<sigh>	2.0	when was the last time you felt really happy	0.0	310	1
 543.32	543.69	Participant	uh	2.0	when was the last time you felt really happy	0.0	310	1
@@ -65,12 +68,16 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 616.48	620.84	Participant	if workout pretty hard it's bad but if i don't workout it i don't know just eh it's hard	1.0	how easy is it for you to get a good night's sleep	0.0	312	1
 636.45	637.46	Participant	i'm probably like i am now	1.0	what are you like when you don't sleep well	1.0	312	1
 637.99	643.34	Participant	normal i think not as not as happy about everything  but still pretty okay i can still function	1.0	what are you like when you don't sleep well	1.0	312	1
+651.53	651.76	Participant	no	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	312	1
+653.45	654.15	Participant	maybe slightly	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	312	1
 724.31	725.14	Participant	no not really	3.0	is there anything you regret	0.0	312	1
 251.01	252.76	Participant	i like to go to the gym	0.0	what are some things you like to do for fun	4.0	313	1
 253.85	257.565	Participant	uh hang out with friends read	0.0	what are some things you like to do for fun	4.0	313	1
 266.345	267.685	Participant	mm at times	4.0	do you consider yourself an introvert	0.0	313	1
 423.18	423.77	Participant	hmm	2.0	when was the last time you felt really happy	0.0	313	1
 428.925	431.335	Participant	uh maybe like	2.0	when was the last time you felt really happy	0.0	313	1
+455.97	458.08	Participant	uh yeah i'm i'm	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	313	1
+458.922	461.632	Participant	easier more easily irritated	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	313	1
 478.47	479.71	Participant	uh yeah awhile ago	5.0	have you been diagnosed with depression	1.0	313	1
 601.265	602.185	Participant	uh	3.0	what are you most proud of in your life	2.0	313	1
 602.895	604.505	Participant	being able to	3.0	what are you most proud of in your life	2.0	313	1
@@ -88,6 +95,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 509.895	512.605	Participant	um it's okay i'd say it's pretty easy	1.0	how easy is it for you to get a good night's sleep	0.0	315	1
 517.23	517.77	Participant	irritated	1.0	what are you like when you don't sleep well	1.0	315	1
 520.01	520.37	Participant	tired	1.0	what are you like when you don't sleep well	1.0	315	1
+536.7	537.43	Participant	huh what did you say	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	315	1
+542.085	542.965	Participant	no not really	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	315	1
 551.835	560.155	Participant	um i think he would describe me as a stand up guy i try to be um um a good loyal friend and	0.0	how would your best friend describe you	5.0	315	1
 561.347	564.177	Participant	and an adult i think he would describe me like that 	0.0	how would your best friend describe you	5.0	315	1
 655.015	658.495	Participant	um yes a lot of things i regret um	3.0	is there anything you regret	0.0	315	1
@@ -102,6 +111,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 338.41	339.49	Participant	uh s	0.0	what do you enjoy about traveling	1.0	316	1
 340.29	344.48	Participant	being in a different environment learning different cultures meeting people 	0.0	what do you enjoy about traveling	1.0	316	1
 388.36	388.79	Participant	yes	5.0	have you been diagnosed with depression	1.0	316	1
+426.96	427.55	Participant	yes	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	316	1
+428.01	430.1	Participant	uh i i sleep a lot more 	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	316	1
 562.23	564.22	Participant	when my uh nephew called me	2.0	when was the last time you felt really happy	0.0	316	1
 566.12	569.1	Participant	scrubbed_entry	2.0	when was the last time you felt really happy	0.0	316	1
 584.27	586.33	Participant	uh that i i'm a pretty good person	3.0	what are you most proud of in your life	2.0	316	1
@@ -134,6 +145,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 249.72	255.0	Participant	uh lately it's been pretty tough i guess because i've been staying up so late but	1.0	how easy is it for you to get a good night's sleep 	0.0	318	1
 255.86	258.02	Participant	uh that's my fault <laughter>	1.0	how easy is it for you to get a good night's sleep 	0.0	318	1
 270.73	275.88	Participant	sluggish and tired all day if i don't sleep well all day i'm just laying around 	1.0	what are you like when you don't sleep well 	1.0	318	1
+282.95	284.54	Participant	no not too much 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	318	1
 291.05	293.11	Participant	mm no <laughter>	3.0	is there anything you regret	0.0	318	1
 339.19	339.75	Participant	um	0.0	how would your best friend describe you 	5.0	318	1
 340.37	341.19	Participant	hilarious	0.0	how would your best friend describe you 	5.0	318	1
@@ -154,6 +166,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 183.735	187.875	Participant	right now uh it's we're we're close i have a pretty close family	0.0	how close are you to your family	3.0	320	0
 195.54	196.63	Participant	mm what do you mean	4.0	do you consider yourself an introvert	0.0	320	0
 285.13	286.64	Participant	i don't have a best friend	0.0	how would your best friend describe you	5.0	320	0
+358.322	359.112	Participant	excuse me	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	320	0
+364.822	367.052	Participant	mm changes in my behavior	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	320	0
 428.347	430.437	Participant	it's not easy for me to sleep	1.0	how easy is it for you to get a good night's sleep	0.0	320	0
 430.807	432.007	Participant	to get a good night's sleep	1.0	how easy is it for you to get a good night's sleep	0.0	320	0
 435.817	436.557	Participant	excuse me	1.0	what are you like when you don't sleep well	1.0	320	0
@@ -204,6 +218,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 186.395	187.805	Participant	get away from the city for a minute	0.0	what do you enjoy about traveling	1.0	324	1
 330.795	333.915	Participant	i think when i was a youngster like a teenager	5.0	have you been diagnosed with depression	1.0	324	1
 365.5	366.47	Participant	excuse me	5.0	do you feel like therapy is useful	2.0	324	1
+450.365	452.255	Participant	yeah just like mood swings i guess	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	324	1
 505.82	507.42	Participant	um my best friend	0.0	how would your best friend describe you	5.0	324	1
 510.165	511.285	Participant	my best friends	0.0	how would your best friend describe you	5.0	324	1
 543.585	545.165	Participant	the goals that i've accomplished	3.0	what are you most proud of in your life	2.0	324	1
@@ -240,6 +255,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 394.74	395.26	Participant	depends 	1.0	how easy is it for you to get a good night's sleep 	0.0	326	1
 415.98	416.44	Participant	mm	1.0	what are you like when you don't sleep well 	1.0	326	1
 419.28	420.7	Participant	agitated i guess i don't know	1.0	what are you like when you don't sleep well 	1.0	326	1
+433.21	433.96	Participant	no not me 	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	326	1
+435.59	436.92	Participant	my girlfriend may say so	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	326	1
 461.03	461.37	Participant	nope 	5.0	have you been diagnosed with depression 	1.0	326	1
 471.58	472.83	Participant	whirlwind i guess 	0.0	how would your best friend describe you 	5.0	326	1
 476.51	477.04	Participant	a doer	0.0	how would your best friend describe you 	5.0	326	1
@@ -253,6 +270,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 166.15	167.0	Participant	um	4.0	do you consider yourself an introvert	0.0	327	0
 167.61	167.98	Participant	no	4.0	do you consider yourself an introvert	0.0	327	0
 181.66	185.06	Participant	uh walk along the beach uh bike riding	0.0	what are some things you like to do for fun	4.0	327	0
+428.741	432.311	Participant	um no just getting more positive better	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	327	0
 442.561	443.081	Participant	it's not	1.0	how easy is it for you to get a good night's sleep	0.0	327	0
 443.791	447.281	Participant	it's about fifty fifty some nights i sleep good and some nights i don't	1.0	how easy is it for you to get a good night's sleep	0.0	327	0
 453.18	453.83	Participant	um 	1.0	what are you like when you don't sleep well 	1.0	327	0
@@ -273,6 +291,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 639.57	640.74	Participant	mm it's fairly easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	328	1
 643.89	652.6	Participant	<laughter> uh i guess i get pretty moody you know i could be a little little snappy at people when i don't sleep well when i have	1.0	what are you like when you don't sleep well	1.0	328	1
 653.31	657.39	Participant	lack of sleep but once i get some sleep in me i'm okay	1.0	what are you like when you don't sleep well	1.0	328	1
+670.99	672.85	Participant	no no no changes no	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	328	1
 677.16	687.01	Participant	scrubbed_entry	0.0	how would your best friend describe you 	5.0	328	1
 687.55	688.13	Participant	um	0.0	how would your best friend describe you 	5.0	328	1
 850.31	857.02	Participant	oh man you name it uh i love scuba diving i've only done it twice but i love it wanna get back into it like traveling	0.0	what are some things you like to do for fun 	4.0	328	1
@@ -290,6 +309,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 422.9	423.65	Participant	<sigh>	1.0	how easy is it for you to get a good night's sleep	0.0	330	1
 424.93	429.73	Participant	takes me a little while to fall asleep but once i'm asleep it's it's reasonably okay	1.0	how easy is it for you to get a good night's sleep	0.0	330	1
 438.56	442.58	Participant	uh i think i'm a little forgetful and nervous	1.0	what are you like when you don't sleep well	1.0	330	1
+451.24	451.69	Participant	no	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	330	1
 554.55	555.08	Participant	um	0.0	how would your best friend describe you	5.0	330	1
 556.11	559.2	Participant	reasonably smart inquisitive <inqui> inquisitive and curious	0.0	how would your best friend describe you	5.0	330	1
 596.16	600.63	Participant	uh <sigh> enjoyed hmm	0.0	tell me about something you did recently that you really enjoyed	0.0	330	1
@@ -304,6 +324,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 420.16	426.01	Participant	is there anything i regret yeah there's there are have been opportunities in my life	3.0	is there anything you regret	0.0	333	1
 426.69	428.01	Participant	that i wished i had	3.0	is there anything you regret	0.0	333	1
 495.35	497.68	Participant	no but i've been depressed in my life 	5.0	have you been diagnosed with depression	1.0	333	1
+551.95	552.5	Participant	um 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	333	1
+554.34	556.74	Participant	not really i mean i i feel 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	333	1
 592.7	595.43	Participant	uh pretty easy i don't have a problem sleeping 	1.0	how easy is it for you to get a good night's sleep 	0.0	333	1
 597.08	597.42	Participant	uh 	1.0	how easy is it for you to get a good night's sleep 	0.0	333	1
 601.48	609.19	Participant	usually i'm grumpy <laughter> so if i don't sleep well uh you know i feel tired and irritable  	1.0	what are you like when you don't sleep well 	1.0	333	1
@@ -322,6 +344,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 549.87	552.3	Participant	oh that's the hard part i uh i don't 	1.0	how easy is it for you to get a good night's sleep	0.0	336	1
 585.366	586.27	Participant	um	1.0	what are you like when you don't sleep well	1.0	336	1
 587.7	588.85	Participant	a little irritable	1.0	what are you like when you don't sleep well	1.0	336	1
+601.965	602.43	Participant	my what	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	336	1
+607.51	608.85	Participant	behavior what	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	336	1
 724.64	725.57	Participant	um	2.0	when was the last time you felt really happy	0.0	336	1
 729.106	730.48	Participant	it was about a week ago i think 	2.0	when was the last time you felt really happy	0.0	336	1
 761.52	765.01	Participant	uh i'd say i'm outgoing fun smart	0.0	how would your best friend describe you	5.0	336	1
@@ -357,6 +381,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 236.955	237.279	Participant	no	5.0	have you been diagnosed with depression 	1.0	340	1
 241.237	242.087	Participant	it's pretty easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	340	1
 246.587	248.647	Participant	mm just sleepy <laughter> 	1.0	what are you like when you don't sleep well	1.0	340	1
+254.242	256.507	Participant	uh in my behavior it got better	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	340	1
 319.193	320.853	Participant	uh just went to disneyland 	0.0	tell me about something you did recently that you really enjoyed 	0.0	340	1
 322.493	327.203	Participant	with my son for his birthday and my and my uh daughter i really enjoyed that 	0.0	tell me about something you did recently that you really enjoyed 	0.0	340	1
 337.343	338.863	Ellie	do you find it easy to be a parent 	0.0	how close are you to your family do you find it easy to be a parent 	3.0	340	1
@@ -375,6 +400,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 699.19	703.62	Participant	long as i go to bed early i get a good night's sleep but i wake up early as well so	1.0	how easy is it for you to get a good night's sleep 	0.0	341	0
 717.73	718.52	Participant	very moody	1.0	what are you like when you don't sleep well	1.0	341	0
 719.87	722.91	Participant	very irritable short short-tempered i guess	1.0	what are you like when you don't sleep well	1.0	341	0
+732.45	734.76	Participant	if anything i think i'm thinking more positively	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	341	0
+735.59	741.75	Participant	you know like i said especially with my son having a disability you know i i look at it as if you know	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	341	0
 771.42	771.69	Participant	no	5.0	have you been diagnosed with depression	1.0	341	0
 793.96	795.99	Participant	i don't know can we skip that question	3.0	what are you most proud of in your life	2.0	341	0
 796.21	799.23	Participant	<laughter>	3.0	what are you most proud of in your life	2.0	341	0
@@ -384,6 +411,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 412.09	415.51	Participant	uh when my kid children was small playing with 'em	2.0	when was the last time you felt really happy	0.0	343	1
 416.37	419.55	Participant	that's the last time i was really that i recall	2.0	when was the last time you felt really happy	0.0	343	1
 554.89	555.89	Participant	before i uh	5.0	have you been diagnosed with depression	1.0	343	1
+607.14	608.05	Participant	have i ever did what	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	343	1
+614.22	614.52	Participant	no	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	343	1
 627.67	629.39	Participant	oh i don't sleep that good	1.0	how easy is it for you to get a good night's sleep	0.0	343	1
 639.01	640.72	Ellie	what are you like when you don't sleep well	1.0	how easy is it for you to get a good night's sleep	0.0	343	1
 646.02	647.3	Participant	um i don't know	1.0	what are you like when you don't sleep well	1.0	343	1
@@ -398,6 +427,9 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 504.31	509.62	Participant	we real close i can get along with 'em we're real close i have no problems with them  	0.0	how close are you to your family 	3.0	344	1
 520.87	521.95	Participant	uh 	2.0	when was the last time you felt really happy 	0.0	344	1
 523.18	524.47	Participant	this morning <laughter> 	2.0	when was the last time you felt really happy 	0.0	344	1
+600.75	602.61	Participant	uh can you repeat that one more time ma'am 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	344	1
+606.42	607.78	Participant	uh yes i have 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	344	1
+609.12	609.99	Participant	see i had to be	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	344	1
 658.92	660.28	Participant	it's very seldom 	1.0	how easy is it for you to get a good night's sleep 	0.0	344	1
 661.19	666.69	Participant	uh i suffer from p_t_s_d and uh getting that type of sleep	1.0	how easy is it for you to get a good night's sleep 	0.0	344	1
 781.99	782.67	Participant	it's a good thing	2.0	do you have disturbing thoughts	2.0	344	1
@@ -439,6 +471,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 354.23	355.67	Participant	it's fairly difficult 	1.0	how easy is it for you to get a good night's sleep 	0.0	347	1
 377.43	381.04	Participant	just quiet try to stay to myself 'cause i get irritable 	1.0	what are you like when you don't sleep well 	1.0	347	1
 386.88	387.16	Participant	no	5.0	have you been diagnosed with depression 	1.0	347	1
+411.2	415.09	Participant	not really no just just <j> pretty pretty normal 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	347	1
 422.95	423.64	Participant	my children 	3.0	what are you most proud of in your life 	2.0	347	1
 532.25	533.63	Participant	no not so much 	3.0	is there anything you regret	0.0	347	1
 563.36	567.77	Participant	i feel happy all the time though i mean on and off so it's it's real hard to pinpoint 	2.0	when was the last time you felt really happy 	0.0	347	1
@@ -447,6 +480,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 320.39	321.32	Participant	not for a while	2.0	when was the last time you felt really happy 	0.0	348	0
 322.23	323.13	Participant	maybe a month ago 	2.0	when was the last time you felt really happy 	0.0	348	0
 374.46	374.91	Participant	yes	5.0	have you been diagnosed with depression 	1.0	348	0
+442.23	445.96	Participant	no i'm just not happy i don't feel good and i'm not happy  	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	348	0
 465.02	466.28	Participant	terrible i don't sleep 	1.0	how easy is it for you to get a good night's sleep 	0.0	348	0
 472.36	474.19	Participant	oh crazy distracted	1.0	what are you like when you don't sleep well 	1.0	348	0
 475.37	475.71	Participant	just	1.0	what are you like when you don't sleep well 	1.0	348	0
@@ -462,6 +496,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 191.06	193.12	Participant	occasionally yes <laughter>	4.0	do you consider yourself an introvert 	0.0	350	0
 313.74	320.86	Participant	uh i think i'm very close to my family we're a pretty close knit family talk every day um see each other almost every day 	0.0	how close are you to your family 	3.0	350	0
 404.96	405.49	Participant	i have 	5.0	have you been diagnosed with depression 	1.0	350	0
+499.72	500.34	Participant	um 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	350	0
+501.39	504.41	Participant	no no it's no no i haven't 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	350	0
 555.93	562.05	Participant	it's kinda difficult um i either have a hard time falling asleep or a hard time staying asleep	1.0	how easy is it for you to get a good night's sleep 	0.0	350	0
 604.11	605.2	Participant	tired <laughter> 	1.0	what are you like when you don't sleep well 	1.0	350	0
 607.01	609.58	Participant	yeah mostly uh tired um	1.0	what are you like when you don't sleep well 	1.0	350	0
@@ -481,6 +517,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 330.07	330.61	Participant	yes	5.0	have you been diagnosed with depression	1.0	351	0
 390.1	392.78	Participant	um yes i do actually um 	5.0	do you feel like therapy is useful	2.0	351	0
 393.69	405.16	Participant	when i feel connected to a therapist um and when i feel like it's a really great way for me to talk about what i'm going through um so yes i do	5.0	do you feel like therapy is useful	2.0	351	0
+518.4	525.48	Participant	um i feel like i've been a little bit with more withdrawn lately um but that's about it	2.0	have you noticed any changes in your behavior or thoughts lately	1.0	351	0
 530.84	538.05	Participant	um <clears throat> some days it's great some days it's not um more recently it's been a little bit more difficult	1.0	how easy is it for you to get a good night's sleep	0.0	351	0
 553.25	556.47	Participant	um <clears throat> very groggy in the morning and um	1.0	what are you like when you don't sleep well	1.0	351	0
 557.58	568.87	Participant	that's about it like during the day i tend to yawn a lot and my friends always are like oh why are you yawning so much are you disinterested <disisinterested> in what we're doing and then trying to tell them it's not that at all <laughter>	1.0	what are you like when you don't sleep well	1.0	351	0
@@ -497,6 +534,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 394.46	403.28	Participant	lately it's been pretty easy but throughout the years i've definitely had a lot of issues with insomnia um just like either not being able to fall asleep	1.0	how easy is it for you to get a good night's sleep 	0.0	352	0
 403.71	414.29	Participant	or just like waking up constantly throughout the night and so right now i'm not really experiencing too much of that but in the past it's definitely been an ongoing issue for me  	1.0	how easy is it for you to get a good night's sleep 	0.0	352	0
 417.84	429.07	Participant	i'm not a pleasant person when i don't sleep well sleep is extremely like important for me i think maybe more so than a lot of people i i like need good sleep to function 	1.0	what are you like when you don't sleep well 	1.0	352	0
+474.31	479.85	Participant	um yeah well i mean just like i said over the past week or so i've become a lot more 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	352	0
+480.3	488.31	Participant	positive i was kind of like feeling a bit like a hermit in a way it's just hard like being in a new city and not really knowing too many people and	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	352	0
 515.12	519.44	Participant	oh it was probably a couple of days ago actually i went um 	2.0	when was the last time you felt really happy 	0.0	352	0
 520.31	525.44	Participant	i went to explore a part of the south bay area that i hadn't really been to before and	2.0	when was the last time you felt really happy 	0.0	352	0
 553.34	557.61	Participant	my best friend would probably say that i'm very daring and	0.0	how would your best friend describe you 	5.0	352	0
@@ -509,6 +548,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 691.31	694.12	Participant	let's see that's kind of hard <laughter> 	0.0	tell me about something you did recently that you really enjoyed 	0.0	352	0
 177.59	178.68	Participant	um sometimes 	4.0	do you consider yourself an introvert  	0.0	353	0
 266.42	268.72	Participant	i have no idea <laughter> 	0.0	how would your best friend describe you 	5.0	353	0
+455.71	456.97	Participant	um <sigh>	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	353	0
+457.71	462.73	Participant	well i feel like more like myself which is a huge improvement um	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	353	0
 489.25	499.13	Participant	um it's gotten better i'm okay <ok> i'm better now um the first three months it was very difficult i couldn't sleep through the night and i woke maybe two or three times and would be awake for a couple hours	1.0	how easy is it for you to get a good night's sleep 	0.0	353	0
 499.8	502.71	Participant	but now i am um sleeping through the night again 	1.0	how easy is it for you to get a good night's sleep 	0.0	353	0
 508.98	511.85	Participant	um i feel <f> groggy <sigh>	1.0	what are you like when you don't sleep well 	1.0	353	0
@@ -527,6 +568,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 223.21	226.28	Participant	uh i'm kind of on the outs with my parents 	0.0	how close are you to your family 	3.0	355	1
 322.938	323.658	Participant	i was	5.0	have you been diagnosed with depression 	1.0	355	1
 324.708	330.65	Participant	diagnosed with depression after a hospital visit in april of two thousand eleven   	5.0	have you been diagnosed with depression 	1.0	355	1
+385.97	386.91	Participant	well mm	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	355	1
+387.8	392.54	Participant	eh just uh it just the i guess the general feeling of hopelessness  	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	355	1
 413.44	414.22	Participant	very easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	355	1
 416.2	421.15	Participant	'cause now i'm old when i was young i couldn't sleep more than six <s> four six hours a night 	1.0	how easy is it for you to get a good night's sleep 	0.0	355	1
 458.17	460.31	Participant	i don't know probably uh 	2.0	when was the last time you felt really happy 	0.0	355	1
@@ -541,6 +584,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 235.12	239.46	Participant	uh fairly close but they most of them live around l_a	0.0	how close are you to your family 	3.0	356	1
 240.5	242.3	Participant	uh there's a few that are from far <f>	0.0	how close are you to your family 	3.0	356	1
 516.24	516.68	Participant	yes 	5.0	have you been diagnosed with depression 	1.0	356	1
+709.13	709.58	Participant	uh 	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	356	1
+712.04	718.65	Participant	well i don't know if it's changes as i a little bit i just tend to be focused on some things that are	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	356	1
 783.01	785.57	Participant	oh you mean in life in general yeah well	3.0	is there anything you regret 	0.0	356	1
 786.72	790.99	Participant	i think i regret not finishing college i think i had a i think i was <wa>	3.0	is there anything you regret 	0.0	356	1
 893.69	895.62	Participant	um let's see 	0.0	tell me about something you did recently that you really enjoyed 	0.0	356	1
@@ -570,6 +615,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 298.531	301.291	Participant	um more towards my sisters not my parents	0.0	how close are you to your family 	3.0	358	1
 302.251	303.981	Participant	i'm not close at all with my parents	0.0	how close are you to your family 	3.0	358	1
 331.84	332.371	Participant	yes 	5.0	have you been diagnosed with depression 	1.0	358	1
+395.805	396.274	Participant	yes	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	358	1
 400.384	400.994	Participant	not easy 	1.0	how easy is it for you to get a good night's sleep 	0.0	358	1
 407.292	408.946	Participant	airheaded spacey 	1.0	what are you like when you don't sleep well	1.0	358	1
 410.088	410.716	Participant	um 	1.0	what are you like when you don't sleep well	1.0	358	1
@@ -587,6 +633,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 230.25	231.24	Participant	no i have not	5.0	have you been diagnosed with depression	1.0	360	0
 234.87	245.95	Participant	fairly easy most of the time but if there are like noises around me then it gets a little harder like a a neighbor partying or or loud noises in the house then it's hard but usually it's easy  	1.0	how easy is it for you to get a good night's sleep 	0.0	360	0
 249.85	257.79	Participant	i'm just like really tired in the morning like i don't have a attitude or anything but i'm just like tired in the morning like i need more sleep when i wake up 	1.0	what are you like when you don't sleep well 	1.0	360	0
+274.11	274.69	Participant	no	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	360	0
 279.41	284.5	Participant	they'd describe me as fun loving carefree a caring individual a caring person 	0.0	how would your best friend describe you 	5.0	360	0
 289.26	295.06	Participant	no <n> no not really i mean i've had some bad experiences but for the most part i don't regret anything  	3.0	is there anything you regret 	0.0	360	0
 312.41	316.0	Participant	i felt really happy on christmas when i got engaged <laughter> 	2.0	when was the last time you felt really happy 	0.0	360	0
@@ -598,6 +645,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 177.99	180.65	Participant	i'm very close to my children and my father 	0.0	how close are you to your family 	3.0	362	0
 264.46	268.42	Participant	i'm a good friend i'm a true friend i'm honest i'm real	0.0	how would your best friend describe you 	5.0	362	0
 269.2	270.21	Participant	i'm dependable	0.0	how would your best friend describe you 	5.0	362	0
+361.02	362.45	Participant	i have yes i have	2.0	have you noticed any changes in your behavior or thoughts lately 	1.0	362	0
 389.25	392.34	Participant	it's not it's never easy it's always bad 	1.0	how easy is it for you to get a good night's sleep 	0.0	362	0
 396.14	398.03	Participant	tired lethargic	1.0	what are you like when you don't sleep well 	1.0	362	0
 398.86	403.61	Participant	um it's hard to keep my thoughts in order it's hard just to do the basics during the day  	1.0	what are you like when you don't sleep well 	1.0	362	0
@@ -614,6 +662,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 742.245	743.575	Participant	no not at all	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	363	1
 746.6	748.2	Participant	no not really no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	363	1
 752.555	757.47	Participant	i don't have problems sleeping that's i i don't ever recall having any problem sleeping so no	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	363	1
+769.36	773.66	Participant	no uh i well i just <deep breath> the only thing i could say is um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	363	1
+774.875	777.545	Participant	after i had my heart attack a few years ago	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	363	1
 800.86	802.81	Participant	the last time i felt really happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	363	1
 805.475	806.275	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	363	1
 914.095	917.505	Participant	well there's a lot that i regret obviously in my marriage	3.0	regret (is there anything you regret)	0.0	363	1
@@ -634,6 +684,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 1309.666	1314.116	Participant	it all depends if i exercise regularly and i don't eat too late	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	364	1
 1330.426	1331.886	Participant	i feel pretty good lately	2.0	feel_lately (how have you been feeling lately)	3.0	364	1
 1332.261	1336.386	Participant	you know i've been like anybody else more periods of blue in your life but	2.0	feel_lately (how have you been feeling lately)	3.0	364	1
+1345.381	1346.391	Participant	no not really	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	364	1
+1346.981	1350.081	Participant	i seem i think i seem a little happier more content lately	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	364	1
 1356.716	1361.261	Participant	um i've had thought maybe in the past because i do have a family history of it	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	364	1
 1361.961	1362.851	Participant	and	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	364	1
 1377.236	1379.666	Participant	i do i was really against it in the past	5.0	therapy_useful (do you feel like therapy is useful)	2.0	364	1
@@ -660,6 +712,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 698.12	698.63	Participant	um	2.0	feel_lately (how have you been feeling lately)	3.0	366	1
 722.085	722.435	Participant	nah	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	366	1
 726.14	726.49	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	366	1
+726.98	727.2	Participant	sorry	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	366	1
+731.82	733.83	Participant	<sigh> mm <sigh>	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	366	1
 776.07	777.39	Participant	hmm <laughter>	3.0	regret (is there anything you regret)	0.0	366	1
 779.17	779.97	Participant	regret	3.0	regret (is there anything you regret)	0.0	366	1
 1139.335	1145.63	Participant	<laughter> my best friend <deep breath> uh she describes me as someone who's funny	0.0	BF_describe (how would your best friend describe you)	5.0	366	1
@@ -719,6 +773,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 630.85	635.22	Participant	i wish i could <cou> were like hard-wired to go to sleep earlier because i just i wind up staying up	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	370	1
 668.05	674.08	Participant	i've been pretty feeling pretty good i i've been i have no complaints physically and you know health-wise i feel good um	2.0	feel_lately (how have you been feeling lately)	3.0	370	1
 674.83	678.39	Participant	you know my relationships with my my family and friends are good uh	2.0	feel_lately (how have you been feeling lately)	3.0	370	1
+694.24	698.79	Participant	no no i've been fairly consistent with my behavior and my thoughts i think that um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	370	1
+700.49	709.85	Participant	everything has been been pretty okay pretty steady no no nothing traumatic nothing um kinda resurfacing from the past nothing of the sort has has happened or is happening	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	370	1
 714.56	714.88	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	370	1
 717.56	717.98	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	370	1
 722.6	728.17	Participant	well i think there's plenty of things everybody regrets uh yeah yeah there's there's plenty of things um <sigh>	3.0	regret (is there anything you regret)	0.0	370	1
@@ -736,6 +792,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 344.15	346.69	Participant	maybe not accomplishing as much as i	3.0	feelguilty (what's something you feel guilty about)	1.0	371	1
 420.09	421.86	Participant	uh extremely difficult	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	371	1
 453.27	455.25	Participant	mm i guess it depends on what i have to do	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	371	1
+473.54	475.98	Participant	well in the last few minutes since we started talking about	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	371	1
+476.63	477.6	Participant	depressing stuff	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	371	1
 485.57	486.19	Participant	i haven't	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	371	1
 489.55	489.84	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	371	1
 494.82	495.39	Participant	mm	2.0	disturbing_thoughts (do you have disturbing thoughts)	2.0	371	1
@@ -779,6 +837,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 581.66	589.32	Participant	usually it's pretty easy the last the last couple weeks like has been uncharacteristically like not as good	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	374	0
 642.18	649.86	Participant	cranky <laughter> i value good sleep <laughter> and i'm so i'm used to it so it's just yeah it's not a good	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	374	0
 650.36	650.84	Participant	feeling	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	374	0
+659.98	660.494	Participant	um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	374	0
+661.88	663.24	Participant	not really no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	374	0
 667.24	667.714	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	374	0
 744.794	746.174	Participant	yes um	5.0	therapy_useful (do you feel like therapy is useful)	2.0	374	0
 746.6	749.83	Participant	<laughter> sometimes more than others but yeah overall i would say so	5.0	therapy_useful (do you feel like therapy is useful)	2.0	374	0
@@ -797,6 +857,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 370.64	372.8	Participant	kinda hard but i usually go to sleep good	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	375	1
 379.15	381.0	Participant	i think i'm kinda snappy <sn> i think i'm snappy	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	375	1
 387.8	389.31	Participant	positive optimistic	2.0	feel_lately (how have you been feeling lately)	3.0	375	1
+395.89	396.34	Participant	yeah	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	375	1
 429.08	429.5	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	375	1
 432.08	432.47	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	375	1
 447.22	451.02	Participant	i was happy yesterday <yester> i happy yesterday 'cause i you know i made a couple good decisions	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	375	1
@@ -811,6 +872,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 479.319	484.194	Participant	i like the nights but i don't like the morning it's like leave me alone until i get my first cup of coffee	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	376	0
 493.69	496.83	Participant	um well i've been i've been depressed	2.0	feel_lately (how have you been feeling lately)	3.0	376	0
 497.515	498.752	Participant	for quite some time	2.0	feel_lately (how have you been feeling lately)	3.0	376	0
+537.373	538.831	Participant	um i just	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	376	0
+539.552	544.531	Participant	i might get angry a little easier i sleep a lot i eat i overeat	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	376	0
 559.715	565.789	Participant	yes i have a uh psychiatrist that prescribes me medication on a regular basis	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	376	0
 708.115	708.885	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	376	0
 715.136	716.142	Participant	uh <sigh>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	376	0
@@ -867,6 +930,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 1349.32	1350.02	Participant	um	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	380	1
 1392.38	1394.14	Participant	tired uh	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	380	1
 1394.86	1395.91	Participant	very	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	380	1
+1437.99	1438.6	Participant	since	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	380	1
+1439.375	1440.695	Participant	like lately as in when	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	380	1
 1513.57	1515.13	Participant	no i just	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	380	1
 1518.41	1518.88	Participant	nope	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	380	1
 1527.68	1529.79	Participant	the last time i felt really happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	380	1
@@ -879,6 +944,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 617.425	618.65	Participant	guilty	3.0	feelguilty (what's something you feel guilty about)	1.0	383	1
 855.624	856.613	Participant	hm	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	383	1
 857.788	858.947	Participant	if i	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	383	1
+942.502	943.793	Participant	mm	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	383	1
+952.559	956.871	Participant	mm i i guess not if i can't think of something no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	383	1
 961.18	963.315	Participant	i've been feeling	2.0	feel_lately (how have you been feeling lately)	3.0	383	1
 964.685	974.184	Participant	kind of like kind of like this kind of just cruising on a on a grey line but it's a nice grey it's a really nice hue	2.0	feel_lately (how have you been feeling lately)	3.0	383	1
 990.713	993.696	Participant	no no i haven't	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	383	1
@@ -899,6 +966,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 282.89	283.49	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	385	1
 287.62	288.46	Participant	somewhat okay	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	385	1
 293.81	295.79	Participant	just waking up thinking	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	385	1
+310.07	310.47	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	385	1
 315.89	316.63	Participant	i don't know	2.0	feel_lately (how have you been feeling lately)	3.0	385	1
 324.37	326.1	Participant	hm don't don't remember	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	385	1
 335.32	337.55	Participant	i i don't know talking to you	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	385	1
@@ -943,6 +1011,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 397.71	398.58	Participant	tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	391	0
 406.94	407.24	Participant	<sniff>	2.0	feel_lately (how have you been feeling lately)	3.0	391	0
 408.04	410.04	Participant	uh frustrated	2.0	feel_lately (how have you been feeling lately)	3.0	391	0
+426.4	426.84	Participant	<sniff>	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	391	0
+427.43	428.42	Participant	um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	391	0
 435.01	435.39	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	391	0
 441.64	441.99	Participant	<sniff>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	391	0
 443.52	444.93	Participant	oh wow	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	391	0
@@ -967,6 +1037,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 376.32	378.38	Participant	just sort of foggy and distracted	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	392	0
 378.95	380.11	Participant	i have trouble concentrating	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	392	0
 386.83	388.39	Participant	you mean like my body	2.0	feel_lately (how have you been feeling lately)	3.0	392	0
+399.81	400.16	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	392	0
+400.84	401.78	Participant	it's been the same as ever	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	392	0
 406.08	406.41	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	392	0
 409.25	409.58	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	392	0
 415.49	416.49	Participant	uh	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	392	0
@@ -986,6 +1058,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 398.7	400.59	Participant	just mainly uh tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	393	1
 405.97	408.42	Participant	i've been okay <o> i've been fine lately	2.0	feel_lately (how have you been feeling lately)	3.0	393	1
 412.2	412.84	Participant	i have	2.0	feel_lately (how have you been feeling lately)	3.0	393	1
+417.46	417.88	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	393	1
 423.28	424.05	Participant	no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	393	1
 427.4	428.17	Participant	no i have not	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	393	1
 437.12	438.68	Participant	i would say	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	393	1
@@ -1010,6 +1083,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 583.69	584.35	Participant	i don't change	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	397	1
 589.51	590.9	Participant	so so i had friend <f> uh	2.0	feel_lately (how have you been feeling lately)	3.0	397	1
 592.0	599.17	Participant	things are good with the kids and the grandkids except for the little incident with my granddaughter <granddaugh> uh my youngest daughter but i had a friend recently who was uh	2.0	feel_lately (how have you been feeling lately)	3.0	397	1
+626.15	630.46	Participant	mm no not really only consistent thing about me is i'm very inconsistent	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	397	1
 635.72	637.33	Participant	uh no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	397	1
 640.39	640.8	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	397	1
 642.08	644.71	Participant	but i've had moments where i felt i was i was depressed	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	397	1
@@ -1032,6 +1106,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 460.09	460.98	Participant	uh i'm tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	400	1
 466.7	467.5	Participant	been feeling	2.0	feel_lately (how have you been feeling lately)	3.0	400	1
 468.14	470.06	Participant	better than i have in a long time	2.0	feel_lately (how have you been feeling lately)	3.0	400	1
+501.2	508.27	Participant	<deep breath> yes um less tense and less irritable and uh i have more clarity and	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	400	1
+508.76	510.49	Participant	more control over my	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	400	1
 522.13	522.68	Participant	nope	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	400	1
 526.0	527.74	Participant	yes to some extent	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	400	1
 602.6	602.99	Participant	yes	5.0	therapy_useful (do you feel like therapy is useful)	2.0	400	1
@@ -1056,6 +1132,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 591.26	591.88	Participant	irritable	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	401	0
 598.73	600.0	Participant	up and down	2.0	feel_lately (how have you been feeling lately)	3.0	401	0
 601.17	603.53	Participant	up and up and down like sometimes i've	2.0	feel_lately (how have you been feeling lately)	3.0	401	0
+662.18	662.51	Participant	yeah	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	401	0
+663.01	663.49	Participant	i have	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	401	0
 699.91	700.33	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	401	0
 703.53	703.98	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	401	0
 709.79	712.43	Participant	uh	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	401	0
@@ -1109,6 +1187,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 538.82	541.35	Participant	mm not too easy	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	412	1
 571.04	572.47	Participant	uh tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	412	1
 576.68	577.62	Participant	tired <laughter>	2.0	feel_lately (how have you been feeling lately)	3.0	412	1
+583.84	586.48	Participant	mm just uh not as positive	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	412	1
 590.62	591.23	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	412	1
 593.92	594.47	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	412	1
 602.48	603.46	Participant	mm	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	412	1
@@ -1148,6 +1227,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 516.185	522.155	Participant	you would never know 'cause when it's work i i'm professional so if i am tired they'd never know	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	415	0
 531.93	532.835	Participant	um <sigh>	2.0	feel_lately (how have you been feeling lately)	3.0	415	0
 535.017	535.617	Participant	tired	2.0	feel_lately (how have you been feeling lately)	3.0	415	0
+548.232	548.612	Participant	yeah	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	415	0
+549.247	549.827	Participant	definitely	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	415	0
 585.37	585.55	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	415	0
 588.485	588.735	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	415	0
 593.97	595.84	Participant	um <sigh>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	415	0
@@ -1211,6 +1292,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 557.2	562.64	Participant	my immediate i'm very close but distant not very close	0.0	family_roleB (how close are you to your family)	3.0	423	0
 612.3	616.02	Participant	easy <laughter> easy <laughter>	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	423	0
 619.39	621.23	Participant	i've been feeling well	2.0	feel_lately (how have you been feeling lately)	3.0	423	0
+628.9	630.19	Participant	um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	423	0
+631.9	635.16	Participant	yes a little stressed but i'm trying to manage that	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	423	0
 647.12	648.47	Participant	um	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	423	0
 648.79	650.07	Participant	in the past	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	423	0
 735.58	741.1	Participant	um i think through finding p_t_s_d they were trying to link depression	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	423	0
@@ -1263,6 +1346,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 500.94	503.39	Participant	i'm very irritable <laughter> and	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	427	0
 504.19	504.99	Participant	uh	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	427	0
 517.16	518.76	Participant	i've been feeling good fine	2.0	feel_lately (how have you been feeling lately)	3.0	427	0
+526.1	526.5	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	427	0
 530.75	531.2	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	427	0
 533.91	534.36	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	427	0
 539.03	539.66	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	427	0
@@ -1285,6 +1369,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 402.85	404.46	Participant	i haven't noticed but maybe	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	428	1
 420.94	421.24	Participant	good	2.0	feel_lately (how have you been feeling lately)	3.0	428	1
 422.79	423.75	Participant	everything's great	2.0	feel_lately (how have you been feeling lately)	3.0	428	1
+426.75	427.53	Participant	um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	428	1
+428.96	431.93	Participant	maybe that i wanna start <s> know like start a new business or something	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	428	1
 458.97	460.27	Participant	i don't even know what it what is that	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	428	1
 464.58	465.06	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	428	1
 469.13	470.48	Participant	<coughs>	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	428	1
@@ -1308,6 +1394,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 642.05	645.38	Participant	oh lethargic um <sigh>	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	429	1
 647.1	650.35	Participant	just going through the motions <laughter> you know	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	429	1
 680.12	682.93	Participant	good um i can't wait to get up and start the day	2.0	feel_lately (how have you been feeling lately)	3.0	429	1
+688.87	689.92	Participant	oh um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	429	1
+690.47	694.85	Participant	if if that happens it's gradual i'm always thinking about	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	429	1
 707.17	707.57	Participant	with what	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	429	1
 711.95	717.92	Participant	p eh you mean no i don't think so no i haven't be diagnosed <diag> no i haven't been xxx diagnosed with any psychological	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	429	1
 719.16	720.15	Participant	acronym <laughter>	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	429	1
@@ -1331,6 +1419,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 514.03	516.86	Participant	crabby uh i suppose like anybody else um	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	430	1
 518.76	519.2	Participant	tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	430	1
 528.97	529.41	Participant	i feel good	2.0	feel_lately (how have you been feeling lately)	3.0	430	1
+535.81	537.86	Participant	mm no not really um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	430	1
+540.48	541.73	Participant	no no i i wouldn't say	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	430	1
 547.07	547.83	Participant	no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	430	1
 550.55	551.16	Participant	yes i have	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	430	1
 617.54	618.45	Participant	i'm sorry say again	5.0	therapy_useful (do you feel like therapy is useful)	2.0	430	1
@@ -1351,6 +1441,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 433.62	437.15	Participant	just restless and just a little more stressed constant things more	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	433	1
 437.72	438.76	Participant	would be on my mind	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	433	1
 446.75	449.04	Participant	xxx pretty relaxed calm	2.0	feel_lately (how have you been feeling lately)	3.0	433	1
+456.98	459.03	Participant	not really just same old	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	433	1
+459.82	461.49	Participant	me day through day just	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	433	1
 472.57	474.02	Participant	no i have not being diagnosed	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	433	1
 477.76	479.59	Participant	no i have not been diagnosed by depression	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	433	1
 484.84	486.85	Participant	um earlier today when i had some food	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	433	1
@@ -1376,6 +1468,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 842.5	854.02	Participant	i'm going eventually i'm gonna be irritable but it doesn't happen right away it depends on my environment and who's around me if there are difficult people that's gonna be a challenge for me and um	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	434	1
 864.9	866.07	Participant	how i been feeling lately	2.0	feel_lately (how have you been feeling lately)	3.0	434	1
 866.715	867.795	Participant	i just been feeling like	2.0	feel_lately (how have you been feeling lately)	3.0	434	1
+937.96	939.87	Participant	my behavior i'm more mellow	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	434	1
+940.53	942.86	Participant	um i laugh more more humorous	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	434	1
 1012.64	1013.83	Participant	no no i haven't	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	434	1
 1016.54	1016.83	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	434	1
 1021.29	1025.39	Participant	last time i felt happy was last night 'cause the lakers won the basketball game	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	434	1
@@ -1393,6 +1487,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 491.97	499.65	Participant	um if i don't sleep well i'm i may be moving around in the bed and you know um	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	437	1
 500.38	503.61	Participant	messing up the sheets but that doesn't happen too often	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	437	1
 507.18	512.64	Participant	oh pretty good i think i've been feeling pretty good no major health problems or anything	2.0	feel_lately (how have you been feeling lately)	3.0	437	1
+518.29	518.8	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	437	1
 522.33	522.9	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	437	1
 525.44	526.29	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	437	1
 530.96	533.97	Participant	uh last time i was really happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	437	1
@@ -1418,6 +1513,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 645.38	646.05	Participant	irrational	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	441	0
 649.63	650.16	Participant	tired	2.0	feel_lately (how have you been feeling lately)	3.0	441	0
 653.39	655.33	Participant	sick of the world angry at the world	2.0	feel_lately (how have you been feeling lately)	3.0	441	0
+669.74	671.0	Participant	sometimes i don't wanna go on	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	441	0
 682.93	684.89	Participant	oh yeah <laughter> oh yeah	5.0	therapy_useful (do you feel like therapy is useful)	2.0	441	0
 713.67	716.15	Participant	when i saw my grandchildren when they came to visit	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	441	0
 740.8	741.37	Participant	<sniff>	0.0	Ellie17Dec2012_10 (tell me about something you did recently that you really enjoyed)	0.0	441	0
@@ -1441,6 +1537,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 408.395	409.555	Participant	uh tired	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	443	1
 414.84	416.53	Participant	uh kind of uh	2.0	feel_lately (how have you been feeling lately)	3.0	443	1
 417.21	417.8	Participant	mm	2.0	feel_lately (how have you been feeling lately)	3.0	443	1
+450.74	452.82	Participant	not too much no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	443	1
 456.52	456.93	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	443	1
 459.54	460.21	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	443	1
 465.42	470.68	Participant	oh i had a dream a few days <d> weeks ago a few days ago and i was really happy in the dream	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	443	1
@@ -1478,6 +1575,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 418.38	419.27	Participant	i sleep well	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	445	1
 433.88	435.95	Participant	i've been feeling uh good	2.0	feel_lately (how have you been feeling lately)	3.0	445	1
 436.43	440.9	Participant	eh the my reality is i've been hit with a lot of financial	2.0	feel_lately (how have you been feeling lately)	3.0	445	1
+451.605	459.605	Participant	i've been looking at it as my girlfriend has told me that i need to do this so therefore it is on the forefront of my mind right now	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	445	1
 464.48	464.84	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	445	1
 467.54	467.9	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	445	1
 472.85	473.36	Participant	today	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	445	1
@@ -1540,6 +1638,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 523.23	524.04	Participant	<sigh>	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	448	1
 578.14	583.39	Participant	<sniff> well i wish some things could be different but uh i'm not dissatisfied <sniff> um	2.0	feel_lately (how have you been feeling lately)	3.0	448	1
 584.26	593.89	Participant	uh i'm happy with my life uh there there uh like with anybody else there's a few things that i wish were different and i think that's in anybody everybody else's uh you know life	2.0	feel_lately (how have you been feeling lately)	3.0	448	1
+605.11	608.54	Participant	yeah i feel a little less motivated <sniff> um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	448	1
+609.55	613.33	Participant	recently well i can't say recently this was back in january	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	448	1
 701.01	701.15	Participant	how <h	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	448	1
 703.06	704.49	Participant	no no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	448	1
 707.67	708.18	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	448	1
@@ -1580,6 +1680,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 533.9	534.3	Participant	<laughter>	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	454	0
 537.56	537.97	Participant	pretty good	2.0	feel_lately (how have you been feeling lately)	3.0	454	0
 539.32	539.71	Participant	pretty great	2.0	feel_lately (how have you been feeling lately)	3.0	454	0
+543.56	544.05	Participant	um	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	454	0
+545.31	552.16	Participant	not really i think i'm getting up there in age so you know with a woman and perimenopausal stuff that's part of the sleep deprivation thing i think	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	454	0
 559.115	559.355	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	454	0
 562.05	562.3	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	454	0
 567.66	568.25	Participant	this morning	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	454	0
@@ -1596,6 +1698,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 536.5	539.49	Participant	uh very easy as soon as i hit the pillow i'm out	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	455	0
 544.99	545.74	Participant	uh	2.0	feel_lately (how have you been feeling lately)	3.0	455	0
 546.59	548.94	Participant	great uh a little more	2.0	feel_lately (how have you been feeling lately)	3.0	455	0
+562.68	568.45	Participant	mm no not overall but again i attribute that and i accredit that to	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	455	0
+569.03	573.02	Participant	the spiritual practices that i perform on a daily basis that keep me pretty	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	455	0
 578.8	579.44	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	455	0
 580.125	580.285	Participant	mm	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	455	0
 582.14	582.78	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	455	0
@@ -1616,6 +1720,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 616.12	622.34	Participant	<sigh> uh a little edgy or fidgety maybe a little bit out of it i might um might seem like i'm	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	456	0
 623.06	625.03	Participant	in a good mood 'cause i might be a little giddy and	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	456	0
 640.97	642.36	Participant	i've been feeling pretty good lately	2.0	feel_lately (how have you been feeling lately)	3.0	456	0
+648.57	650.2	Participant	mm not really just	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	456	0
+650.88	652.37	Participant	trying to be more focused <clears throat>	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	456	0
 676.67	677.04	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	456	0
 679.91	680.26	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	456	0
 685.62	691.02	Participant	uh oh just a couple days i was just in with my family and my baby niece in florida and	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	456	0
@@ -1636,6 +1742,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 634.975	642.125	Participant	the hard part is going to bed but as soon as i get to to sleepland i'm pretty much there until an earthquake uh hits	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	457	1
 652.155	661.375	Participant	<deep breath> less verbose and that's about it my dark circles get slightly larger and i'm pretty much the exact same dude because i've been doing it most of my life	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	457	1
 666.27	669.52	Participant	uh so stoked that i might as well be on fire	2.0	feel_lately (how have you been feeling lately)	3.0	457	1
+716.91	717.45	Participant	uh	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	457	1
+719.52	720.3	Participant	yeah	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	457	1
 739.06	742.01	Participant	mm not since you asked me on the form a little while ago no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	457	1
 744.81	748.41	Participant	uh no i used to think i had it but who knows at this point that was awhile ago	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	457	1
 773.1	773.63	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	457	1
@@ -1655,6 +1763,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 572.06	575.27	Participant	i'm a lot more likely to my anger is a lot more likely to come out	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	459	1
 583.53	589.0	Participant	i've been alright this weekend is been better than most my girlfriend has stayed at my place the entire weekend so	2.0	feel_lately (how have you been feeling lately)	3.0	459	1
 589.68	590.52	Participant	i've been happy	2.0	feel_lately (how have you been feeling lately)	3.0	459	1
+600.765	603.315	Participant	<deep breath> <sigh>	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	459	1
+604.41	604.81	Participant	i don't	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	459	1
 613.795	614.225	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	459	1
 615.2	615.52	Participant	but	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	459	1
 616.96	617.57	Participant	yes	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	459	1
@@ -1681,6 +1791,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 544.07	547.67	Participant	when i don't sleep well i can be a little bit grumpy	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	463	1
 548.23	549.54	Participant	uh irritated	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	463	1
 558.4	560.72	Participant	lately i've been okay <o> okay i've been good	2.0	feel_lately (how have you been feeling lately)	3.0	463	1
+566.38	568.2	Participant	uh no i have not	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	463	1
 574.375	574.715	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	463	1
 577.695	578.145	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	463	1
 584.805	585.485	Participant	hmm	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	463	1
@@ -1703,6 +1814,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 573.28	577.75	Participant	i sometimes yeah like if i wanted to i could sleep right now in like ten minutes you know	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	464	1
 589.0	589.61	Participant	lately	2.0	feel_lately (how have you been feeling lately)	3.0	464	1
 590.37	591.76	Participant	i've been feeling	2.0	feel_lately (how have you been feeling lately)	3.0	464	1
+624.8	626.7	Participant	lately like in the past two weeks or today	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	464	1
 674.29	676.49	Participant	uh post traumatic stress disorder	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	464	1
 677.18	677.48	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	464	1
 680.65	682.42	Participant	depression i know how it's like to be depressed	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	464	1
@@ -1747,6 +1859,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 598.265	604.505	Participant	and i have a feeling it's because of a diagnosis of cancer that i received one month ago	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	471	1
 610.72	611.16	Participant	um	2.0	feel_lately (how have you been feeling lately)	3.0	471	1
 611.69	617.65	Participant	xxx i with my own personal uh methods of handling stress	2.0	feel_lately (how have you been feeling lately)	3.0	471	1
+638.04	638.81	Participant	not really	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	471	1
 647.47	648.05	Participant	never	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	471	1
 651.23	651.8	Participant	never	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	471	1
 657.33	661.23	Participant	oh i was either surfing or snowboarding	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	471	1
@@ -1766,6 +1879,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 314.305	315.055	Participant	it's very easy	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	473	0
 320.425	321.875	Participant	mm i yawn a lot	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	473	0
 328.58	328.91	Participant	good	2.0	feel_lately (how have you been feeling lately)	3.0	473	0
+333.86	334.18	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	473	0
 338.42	338.71	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	473	0
 341.94	342.22	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	473	0
 350.35	353.22	Participant	um whenever i go to the gym i get happy	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	473	0
@@ -1784,6 +1898,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 612.1	615.85	Participant	i i tried to go to sleep early again and i ended up tossing and turning and	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	474	1
 623.69	629.72	Participant	um well since i've had a lot of time on my hands like i don't usually have this much time on my hands so sometimes it can be frustrating because	2.0	feel_lately (how have you been feeling lately)	3.0	474	1
 630.19	634.21	Participant	um you don't know what to do with it when you're not working i guess um	2.0	feel_lately (how have you been feeling lately)	3.0	474	1
+646.99	653.28	Participant	um i just that maybe a little more absent-minded than usual just lately with uh the not working thing	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	474	1
 660.17	660.75	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	474	1
 663.39	663.89	Participant	mm mm	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	474	1
 668.93	672.56	Participant	um a couple days ago when i got my new job <laughter> when i got hired	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	474	1
@@ -1804,6 +1919,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 338.3	342.655	Participant	that's one thing i struggle with i definitely get a good night's sleep but it's hard to go to sleep	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	475	1
 368.53	369.43	Participant	i feel okay	2.0	feel_lately (how have you been feeling lately)	3.0	475	1
 372.48	372.91	Participant	happy	2.0	feel_lately (how have you been feeling lately)	3.0	475	1
+377.02	380.08	Participant	mm i mean a little bit right now just because uh	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	475	1
+380.91	387.86	Participant	my wife <w> my wife is uh pregnant so i'm slowly <s> slowly feeling a little bit of the uh the side effects i guess	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	475	1
 418.16	419.83	Participant	this morning when i when i woke up	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	475	1
 425.455	425.745	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	475	1
 428.91	429.22	Participant	have not	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	475	1
@@ -1827,6 +1944,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 498.792	501.432	Participant	um pretty easy 'cause i keep a regular schedule	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	478	0
 505.712	508.862	Participant	um just <jus> just kind of tired maybe a little bit irritable	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	478	0
 512.82	513.442	Participant	uh good	2.0	feel_lately (how have you been feeling lately)	3.0	478	0
+521.23	523.722	Participant	um well i'm recovering from p_t_s_d	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	478	0
+524.33	530.73	Participant	so um i sometimes feel the the p_t_s_d and then i'll i'll take a medication for that	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	478	0
 553.41	555.212	Participant	um in the past but it's treated	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	478	0
 619.431	622.261	Participant	i yeah i have nightmares about my family sometimes	2.0	disturbing_thoughts (do you have disturbing thoughts)	2.0	478	0
 624.025	625.235	Participant	yeah thanks	2.0	disturbing_thoughts (do you have disturbing thoughts)	2.0	478	0
@@ -1852,6 +1971,7 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 532.062	533.442	Participant	i'm uh i'm um	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	479	1
 548.5	548.87	Participant	um	2.0	feel_lately (how have you been feeling lately)	3.0	479	1
 550.12	551.52	Participant	lately meaning today	2.0	feel_lately (how have you been feeling lately)	3.0	479	1
+573.639	573.999	Participant	no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	479	1
 578.292	578.792	Participant	what's that	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	479	1
 584.522	584.862	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	479	1
 592.366	593.666	Participant	um	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	479	1
@@ -1874,6 +1994,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 409.94	411.94	Participant	i guess my mind's unfocused and	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	485	1
 417.73	418.97	Participant	uh pretty good	2.0	feel_lately (how have you been feeling lately)	3.0	485	1
 421.4	422.48	Participant	not really much to say	2.0	feel_lately (how have you been feeling lately)	3.0	485	1
+425.56	429.78	Participant	uh maybe a little bit more depressed 'cause i'm away from most of my friends and family but	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	485	1
+430.59	431.72	Participant	nothing unmanageable	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	485	1
 443.54	443.85	Participant	no	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	485	1
 446.87	447.24	Participant	no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	485	1
 453.37	455.61	Participant	uh <sigh> i guess on the drive out here	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	485	1
@@ -1893,6 +2015,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 440.77	445.8	Participant	very confused or um skittish i guess would be the word	1.0	sleep_affects (what are you like when you don't sleep well)	1.0	486	0
 449.52	450.34	Participant	lately	2.0	feel_lately (how have you been feeling lately)	3.0	486	0
 451.34	456.68	Participant	fine <f> fine except for the fact that my um good friend who i'm helping take care of	2.0	feel_lately (how have you been feeling lately)	3.0	486	0
+467.23	468.77	Participant	um no	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	486	0
+469.29	469.95	Participant	not lately	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	486	0
 475.45	476.33	Participant	no i have not	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	486	0
 479.04	479.9	Participant	no i have not	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	486	0
 486.94	490.3	Participant	um i was excited	2.0	happy_lasttime (tell me about the last time you felt really happy)	0.0	486	0
@@ -1913,6 +2037,8 @@ start_time	stop_time	speaker	value	topic	topic_value	sub_topic	participant	Gende
 753.91	758.25	Participant	um it depends if i'm dealing with a lot of things or studying or	1.0	easy_sleep (how easy is it for you to get a good night's sleep)	0.0	487	0
 782.67	790.18	Participant	i've been feeling okay uh less you know stressful in xxx it it goes in general 'cause i'm got several projects that i'm working on so	2.0	feel_lately (how have you been feeling lately)	3.0	487	0
 791.06	792.97	Participant	um but in general good	2.0	feel_lately (how have you been feeling lately)	3.0	487	0
+799.19	800.09	Participant	like	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	487	0
+800.54	800.96	Participant	i mean	2.0	behavior_changes (have you noticed any changes in your behavior or thoughts lately)	1.0	487	0
 828.83	831.33	Participant	no i haven't but i know it's something that	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	487	0
 832.0	835.83	Participant	a lot of uh say veterans in particular have people have	5.0	ptsd_diagnosed (have you ever been diagnosed with p_t_s_d)	0.0	487	0
 840.65	841.9	Participant	i have not no	5.0	depression_diagnosed (have you been diagnosed with depression)	1.0	487	0

@@ -44,7 +44,15 @@ class topic_selection(object):
          if self.topic =='therapy':
             
              responds=self.therapy_info(df) 
+         
+         if self.topic =='emotion':
             
+             responds=self.emotion_info(df)
+        
+         if self.topic =='behaviour':
+            
+             respond_behaviour,respond_thoughts=self.change_info(df)
+             return respond_behaviour,respond_thoughts
              
          return responds
      
@@ -209,11 +217,76 @@ class topic_selection(object):
          #remove invalid reply or reply with little info
          therapy.dropna(inplace=True)          
          respond =therapy[["participant",'topic','yes/no','value','topic_value']].copy()
+         
+         return respond
+        
+     def emotion_info(self,df):
+         
+          for index, row in df.iterrows():
+              if row.topic== 2 and ( row.sub_topic==3 ):
+                  sentence=row.value
+                  alright,depressed=self.dic()
+                  
+                  for word_not in alright:
+                        if word_not in sentence: 
+                            df['yes/no'][index]=0
+                         
+                            
+                  for word in depressed:
+                        if word in sentence:
+                            df['yes/no'][index]=1 
+                            
+                  if row.value=='no'or row.value=='no 'or row.value=='nah':
+                             df['yes/no'][index]=0        
+                  if row.value=='i have 'or row.value=='i have':
+                             df['yes/no'][index]=1       
+                          
+                 
+                 
+          feeling_lately=df[(df['topic']== 2)&(df['sub_topic']== 3)]
+ #         happy_recently=df[(df['topic']== 2)&(df['sub_topic']== 0)]
+         
+#         dignosis_ptsd.dropna(inplace=True)          
+          respond_feeling =feeling_lately[["participant",'topic','yes/no','value','topic_value']].copy()
+#          respond_happy=happy_recently[["participant",'topic','yes/no','value','topic_value']].copy()
+        
+          return respond_feeling
+      
+        
+     def change_info(self,df):
+        
+         
+         for index, row in df.iterrows():
+              if row.topic== 2 and (row.sub_topic==2 or row.sub_topic==1 ):
+                  sentence=row.value
+                  change,no_change=self.dic()
+                  
+                  for word_not in no_change:
+                        if word_not in sentence: 
+                            df['yes/no'][index]=0
+                         
+                            
+                  for word in change:
+                        if word in sentence:
+                            df['yes/no'][index]=1 
+                            
+                  if row.value=='no'or row.value=='no 'or row.value=='nah':
+                             df['yes/no'][index]=0        
+                  if row.value=='i have 'or row.value=='i have':
+                             df['yes/no'][index]=1       
+         
+         dignosis_depression=df[(df['topic']== 2)&(df['sub_topic']== 1)]
+         dignosis_ptsd=df[(df['topic']== 2)&(df['sub_topic']== 2)]
+         
+         #remove invalid reply or reply with little info
+#         dignosis_ptsd.dropna(inplace=True)          
+         respond_depression =dignosis_depression[["participant",'topic','yes/no','value','topic_value']].copy()
+         respond_ptsd =dignosis_ptsd[["participant",'topic','yes/no','value','topic_value']].copy()
         
          
             
-         return respond              
-           
+         return respond_depression, respond_ptsd  
+    
      def dic(self):
          
          if self.topic =='sleep':
@@ -239,9 +312,18 @@ class topic_selection(object):
              useful,useless= word_dic.therapy()
              
              return useful,useless
+         
+         if self.topic=='emotion':
+             
+             alright,depressed= word_dic.emotion()
+             
+             return alright,depressed
         
-        
- 
+         if self.topic=='behaviour':
+             
+             change,no_change= word_dic.behaviour()
+             
+             return change,no_change
              
         
         
@@ -264,13 +346,18 @@ train_dir='transcripts_topic.csv'
 #dignosis=topic_selection(topic,sub_topic)
 #respond_depression, respond_ptsd  =dignosis.train_index(train_dir)
 
-topic='therapy'
-sub_topic="therapy"
-therapy=topic_selection(topic,sub_topic)
-therapy_respond=therapy.train_index(train_dir)
-
-#topic='feeling_depressed'
-#sub_topic="null"
+#topic='therapy'
+#sub_topic="therapy"
 #therapy=topic_selection(topic,sub_topic)
 #therapy_respond=therapy.train_index(train_dir)
+
+#topic='emotion'
+#sub_topic="emotion"
+#feeling=topic_selection(topic,sub_topic)
+#feeling_respond=feeling.train_index(train_dir)
+
+topic='behaviour'
+sub_topic="behaviour"
+behaviour=topic_selection(topic,sub_topic)
+respond_behaviour,respond_thoughts=behaviour.train_index(train_dir)
 
