@@ -127,7 +127,7 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     
 
     model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3)))
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.3))
 
     model.add(Conv2D(32, (1, 5), padding='valid', strides=1,
               input_shape=input_shape, activation='relu',
