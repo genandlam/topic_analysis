@@ -11,21 +11,27 @@ import pandas as pd
 import os
 from pydub import AudioSegment
 
-def train_index(working_dir):
+def train_index(working_dir,out_dir):
     
          df = pd.read_csv(working_dir,sep='\t')
          participant_id=df.participant.unique()
          participants=participant_id.tolist()
          path='/media/hdd1/genfyp/raw_data/audio/'
+         participant_df=df[(df['participant']== 321)]
          for participant_id in participants:
              participant_df=df[(df['participant']== participant_id)]
              print(participant_id)
              
              combined=segment_want(participant_df,participant_id,path)
-             filename=str(participant_id)+'_AUDIO.wav'
-             combined.export(os.path.join(out_dir, filename),format="wav")
+             filename='P' +str(participant_id)+'_AUDIO.wav'
+             partic_id = 'P' + str(participant_id)
+             participant_dir = os.path.join(out_dir, partic_id)
+             if not os.path.exists(participant_dir):
+                os.makedirs(participant_dir)
+             print(participant_dir)
+             combined.export(os.path.join(participant_dir, filename),format="wav")
          
-     
+         return participant_df
 def segment_want(df,participant_id,path):
     combined = AudioSegment.empty()
     for index, row in df.iterrows():
@@ -49,16 +55,16 @@ def segment_want(df,participant_id,path):
 
          
 if __name__ =='__main__':
-#    train_dir='transcripts_topic.csv'
+#    train_dir='/Users/genevieve/Documents/GitHub/topic_analysis/topic_selection_cnn/transcripts_topic.csv'
    
     train_dir='/media/hdd1/genfyp/topic_analysis/transcripts_topic.csv'
     audio_dir='/media/hdd1/genfyp/raw_data/audio/'
-    out_dir='/media/hdd1/genfyp/raw_data/selected/'
+    out_dir = '/media/hdd1/genfyp/raw_data/interim_selected'
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
- #   participant_df,participant_id=train_index(train_dir)
+#    participant_df,participant_id=train_index(train_dir,out_dir)
 #    
-    train_index(train_dir)
+    train_index(train_dir,out_dir)
 
 
    

@@ -3,15 +3,17 @@ from __future__ import print_function
 import os
 import tensorflow as tf
 import numpy as np
+from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix
 #from plot_metrics import plot_accuracy, plot_loss, plot_roc_curve
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten , BatchNormalization ,regularizers
+from keras.layers import Dense, Dropout, Activation, Flatten ,regularizers
 from keras.layers import Conv2D, MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
 from keras.optimizers import Adam
 from keras import optimizers, activations
+from keras.wrappers.scikit_learn import KerasClassifier
 #access_key = os.environ['AWS_ACCESS_KEY_ID']
 #access_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
 np.random.seed(15)  # for reproducibility
@@ -45,10 +47,10 @@ participants (1). Using Theano backend and Theano image_dim_ordering:
 #    return X
 
 
-def retrieve_file(file):
+def retrieve_file(file_name):
     
     path = '/media/hdd1/genfyp/processed/'
-    outfile = path + file
+    outfile = path + file_name
     X = np.load(outfile)
     return X
 
@@ -99,62 +101,77 @@ def keras_img_prep(X_train, X_test, img_dep, img_rows, img_cols):
 #        input_shape = (img_rows, img_cols, 1)
 #    return X_train, X_test, input_shape
 
-    if K.image_dim_ordering() == 'tf':
-        X_train = X_train.reshape(X_train.shape[0], img_rows, img_cols,1)
-        X_test = X_test.reshape(  X_test.shape[0],img_rows, img_cols,1)
-        input_shape = ( img_rows, img_cols,1)
-    else:
-        X_train = X_train.reshape( X_train.shape[0],1,img_rows, img_cols)
-        X_test = X_test.reshape( X_test.shape[0],1,img_rows, img_cols)
-        input_shape = (1,img_rows, img_cols)
+#   if K.image_dim_ordering() == 'tf':
+    X_train = X_train.reshape(X_train.shape[0], img_cols, img_rows, 1)
+    X_test = X_test.reshape(X_test.shape[0], img_cols, img_rows, 1)
+    input_shape=(img_cols, img_rows, 1)
+         
+#    else:
+#        X_train = X_train.reshape( X_train.shape[0],1,img_rows, img_cols)
+#        X_test = X_test.reshape( X_test.shape[0],1,img_rows, img_cols)
+#        input_shape = (1,img_rows, img_cols)
+        
     return X_train, X_test, input_shape
 
 def cnn(X_train, y_train, X_test, y_test, batch_size,
         nb_classes, epochs, input_shape):
+    
+
     """
     The Convolutional Neural Net architecture for classifying the audio clips
     as normal (0) or depressed (1).
     """  
-    
+   
     model = Sequential()
 
     model.add(Conv2D(32, (3, 3), padding='valid', strides=1,
                      input_shape=input_shape, activation='relu',
- #                    kernel_regularizer=regularizers.l1(0.001),
-#                activity_regularizer=regularizers.l1(0.005),
+#                     kernel_regularizer=regularizers.l2(0.0001),
                      dim_ordering='tf'))
-#    model.add(BatchNormalization())
-    
-
-    model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3)))
-    model.add(Dropout(0.3))
+    model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3), dim_ordering='tf'))
+#    model.add(Dropout(0.1))
 
     model.add(Conv2D(32, (1, 5), padding='valid', strides=1,
               input_shape=input_shape, activation='relu',
- #             kernel_regularizer=regularizers.l1(0.001),
-               dim_ordering='tf'))
-    # activity_regularizer=regularizers.l1(0.05)
-#    model.add(BatchNormalization())
-   
-
-    model.add(MaxPooling2D(pool_size=(1, 3), strides=(1, 3)))
-#    selu=activations.selu(x)
+ #             kernel_regularizer=regularizers.l2(0.0001),
+              dim_ordering='tf'))   
+    model.add(MaxPooling2D(pool_size=(1, 3), strides=(1, 3), dim_ordering='tf'))
+#    model.add(Dropout(0.3))
+    
     model.add(Flatten())
+
+#    model.add(Dropout(0.3))
     model.add(Dense(512, activation='relu'))
     model.add(Dense(512, activation='relu'))
-#    model.add(BatchNormalization())
     model.add(Dropout(0.5))
 
     model.add(Dense(nb_classes))
     model.add(Activation('softmax'))
 
-#    adam=Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0)
-#    adamax=optimizers.Adamax(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0)   
-    sgd_nest=optimizers.SGD(lr=0.01, momentum=0.0, decay=0.01, nesterov=True)
-    #adadelta
+#    optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam',sgd_nest]
+#    param_grid = dict(optimizer=optimizer)
+    adam=optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)   
+    sgd_nest=optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
     model.compile(loss='categorical_crossentropy',
-                  optimizer=sgd_nest,
+                  optimizer=adam,
                   metrics=['accuracy'])
+    
+#    batch_size = [10, 20, 40, 60, 80, 100]
+#    epochs = [10,20]
+#    k_model = KerasClassifier(build_fn=model, verbose=1)
+#    param_grid = dict(batch_size=batch_size, epochs=epochs)
+#    grid = GridSearchCV(estimator=k_model, param_grid=param_grid, n_jobs=-1)
+#    grid_result = grid.fit(X_train, y_train)
+#    # summarize results
+#    print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
+#    means = grid_result.cv_results_['mean_test_score']
+#    stds = grid_result.cv_results_['std_test_score']
+#    params = grid_result.cv_results_['params']
+#    for mean, stdev, param in zip(means, stds, params):
+#        print("%f (%f) with: %r" % (mean, stdev, param))
+    
+    model.summary()
+
 
     history = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs,
                         verbose=1, validation_data=(X_test, y_test))
@@ -166,6 +183,8 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     print('Test accuracy:', score_test[1])
 
     return model, history
+
+#    return model
 
 
 def model_performance(model, X_train, X_test, y_train, y_test):
@@ -245,7 +264,7 @@ if __name__ == '__main__':
     # CNN parameters
     batch_size = 32
     nb_classes = 2
-    epochs = 10
+    epochs = 7
 
     # normalalize data and prep for Keras
     print('Processing images for Keras...')
@@ -263,10 +282,13 @@ if __name__ == '__main__':
 
     # run CNN
     print('Fitting model...')
+#    model = cnn(X_train, y_train, X_test, y_test, batch_size,
+#                         nb_classes, epochs, input_shape)
     model, history = cnn(X_train, y_train, X_test, y_test, batch_size,
                          nb_classes, epochs, input_shape)
 
-    # evaluate model
+
+     #evaluate model
     print('Evaluating model...')
     y_train_pred, y_test_pred, y_train_pred_proba, y_test_pred_proba, \
         conf_matrix = model_performance(model, X_train, X_test, y_train, y_test)
@@ -276,7 +298,7 @@ if __name__ == '__main__':
     model_name = '/media/hdd1/genfyp/models/cnn_{}.h5'.format(model_id)
     model.save(model_name)
 
-    # custom evaluation metrics
+  #   custom evaluation metrics
     print('Calculating additional test metrics...')
     accuracy = float(conf_matrix[0][0] + conf_matrix[1][1]) / np.sum(conf_matrix)
     precision = float(conf_matrix[0][0]) / (conf_matrix[0][0] + conf_matrix[0][1])
