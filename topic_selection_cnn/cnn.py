@@ -153,7 +153,7 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     adam=optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)   
     sgd_nest=optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
     model.compile(loss='categorical_crossentropy',
-                  optimizer=adam,
+                  optimizer=sgd_nest,
                   metrics=['accuracy'])
     
 #    batch_size = [10, 20, 40, 60, 80, 100]
