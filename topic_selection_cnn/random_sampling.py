@@ -66,7 +66,7 @@ def determine_num_crops(depressed_dict, normal_dict, crop_width=125):
     num_samples_from_clips = shortest_pixel_width / crop_width
     print (num_samples_from_clips)
     
-    return 20
+    return 40
 
 
 def build_class_sample_dict(segmented_audio_dict, n_samples, crop_width):
