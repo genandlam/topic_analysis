@@ -9,19 +9,29 @@ Created on Sun Aug  5 12:29:20 2018
 import pandas as pd
 import os 
 import numpy as np 
-import math
+#import math
 
 
 
 
 
-def train_index(working_dir):
-     df = pd.read_csv(working_dir)
-     train_id =df[["Participant_ID",'Gender']].copy() 
+def train_index(train_dir,dev_dir):
+     df_train = pd.read_csv(train_dir)
+     print(df_train.shape)
+     
+     
+     df_dev = pd.read_csv(dev_dir)
+    
+     print(df_dev.shape)
+     df=pd.concat([df_train,df_dev])
+     df = df[["Participant_ID",'Gender']].copy()  
+     print(df_dev.shape)
+     print(df.shape)
      
      
      
-     return train_id
+     
+     return df
 
 def data_retrieve(working_dir,train_id):
     
@@ -116,7 +126,8 @@ def topic_selection(transcript):
 if __name__ == '__main__':
 
     train_dir='/media/hdd1/genfyp/depression_data/train_split_Depression_AVEC2017.csv'
-    train_id=train_index(train_dir)
+    dev_dir ='/media/hdd1/genfyp/depression_data/dev_split_Depression_AVEC2017.csv'
+    train_id=train_index(train_dir,dev_dir)
     
     working_dir = "/media/hdd1/genfyp/raw_data/transcript_data/"   
     transcripts=data_retrieve(working_dir,train_id)
