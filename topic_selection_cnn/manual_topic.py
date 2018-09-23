@@ -15,17 +15,18 @@ import numpy as np
 
 
 
-def train_index(train_dir,dev_dir):
+def train_index(train_dir,dev_dir,test_dir):
      df_train = pd.read_csv(train_dir)
      print(df_train.shape)
-     
-     
      df_dev = pd.read_csv(dev_dir)
-    
      print(df_dev.shape)
-     df=pd.concat([df_train,df_dev])
+     df_test = pd.read_csv(test_dir)
+     df_test=df_test.rename(index=str, columns={"participant_ID": "Participant_ID"})
+     print(df_test.shape)
+     df=pd.concat([df_train,df_dev,df_test])
+     print (df_test)
      df = df[["Participant_ID",'Gender']].copy()  
-     print(df_dev.shape)
+    
      print(df.shape)
      
      
@@ -46,7 +47,9 @@ def data_retrieve(working_dir,train_id):
         
 
         for index, row in participants.iterrows():
-                filename= str(row.Participant_ID)+'_TRANSCRIPT.csv'
+#                print(int(row.Participant_ID))
+                filename= str(int(row.Participant_ID))+'_TRANSCRIPT.csv'
+                
                 location=os.path.join(working_dir, filename)
                 temp = pd.read_csv(location, sep='\t')
                 temp['topic']= np.nan  
@@ -127,12 +130,13 @@ if __name__ == '__main__':
 
     train_dir='/media/hdd1/genfyp/depression_data/train_split_Depression_AVEC2017.csv'
     dev_dir ='/media/hdd1/genfyp/depression_data/dev_split_Depression_AVEC2017.csv'
-    train_id=train_index(train_dir,dev_dir)
+    test_dir='/media/hdd1/genfyp/depression_data/test_split_Depression_AVEC2017.csv'
+    train_id=train_index(train_dir,dev_dir,test_dir)
     
     working_dir = "/media/hdd1/genfyp/raw_data/transcript_data/"   
     transcripts=data_retrieve(working_dir,train_id)
     
-    transcripts.to_csv('transcripts_topic.csv',index=False,sep='\t', encoding='utf-8')
+    transcripts.to_csv('transcripts_topic_dev.csv',index=False,sep='\t', encoding='utf-8')
     
 #    with open ("sementic.csv",'wb') as myfile:
 #        wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)

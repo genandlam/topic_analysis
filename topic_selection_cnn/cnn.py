@@ -142,8 +142,8 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
 
 #    model.add(Dropout(0.3))
     model.add(Dense(512, activation='relu'))
-    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.5))
+#    model.add(Dense(512, activation='relu'))
+    model.add(Dropout(0.2))
 
     model.add(Dense(nb_classes))
     model.add(Activation('softmax'))

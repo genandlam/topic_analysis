@@ -21,11 +21,11 @@ def mel_spec(working_dir):
     librosa.feature.melspectrogram(y=y, sr=44100)
     S = librosa.feature.melspectrogram(y=y, sr=sr)
     # Convert to log scale (dB). We'll use the peak power as reference.
-    log_S = librosa.logamplitude(S, ref_power=np.max)
-    #librosa.amplitude_to_db(S, ref=np.max)
+    log_S =  librosa.amplitude_to_db(S, ref=np.max)
+  
     #   librosa.power_to_db(S, ref=np.max)
+ #  librosa.logamplitude(S, ref_power=np.max)
 
-    
     return log_S
 
 def save_image(log_S,png_name):
