@@ -66,7 +66,7 @@ def determine_num_crops(depressed_dict, normal_dict, crop_width=125):
     num_samples_from_clips = shortest_pixel_width / crop_width
     print (num_samples_from_clips)
     
-    return 40
+    return  num_samples_from_clips 
 
 
 def build_class_sample_dict(segmented_audio_dict, n_samples, crop_width):
@@ -154,8 +154,8 @@ def create_sample_dicts(crop_width):
     """
     # build dictionaries of participants and segmented audio matrix
     depressed_dict, normal_dict = build_class_dictionaries('/media/hdd1/genfyp/raw_data/interim_selected/')
-    n_samples = determine_num_crops(depressed_dict, normal_dict,
-                                    crop_width=crop_width)
+#    n_samples = determine_num_crops(depressed_dict, normal_dict,
+#                                    crop_width=crop_width)
     
 #    merged_dict = dict(normal_dict,  **depressed_dict)
 #    merged_samples=n_samples*2
