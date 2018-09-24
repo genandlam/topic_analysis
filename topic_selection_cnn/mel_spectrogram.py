@@ -24,7 +24,8 @@ def mel_spec(working_dir):
     # Convert to log scale (dB). We'll use the peak power as reference.
     log_S =  librosa.amplitude_to_db(S, ref=np.max)
     t_mel=np.transpose(log_S)
-    print(np.transpose(log_S).shape)
+    
+#    print(np.transpose(log_S).shape)
     #   librosa.power_to_db(S, ref=np.max)
  #  librosa.logamplitude(S, ref_power=np.max)
 
