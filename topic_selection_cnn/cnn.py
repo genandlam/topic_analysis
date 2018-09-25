@@ -3,8 +3,8 @@ import os
 import tensorflow as tf
 import numpy as np
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import confusion_matrix, classification_report,\
-                            f1_score, recall_score,precision_score
+from sklearn.utils import class_weight
+from sklearn.metrics import confusion_matrix, classification_report
 # from plot_metrics import plot_accuracy, plot_loss, plot_roc_curve
 
 from keras.models import Model
@@ -35,7 +35,7 @@ participants (1).
 """
 
 def retrieve_file(file_name):
-    path = '/media/hdd1/genfyp/processed/'
+    path = '/media/hdd1/genfyp/processed_nosampling/'
     outfile = path + file_name
     X = np.load(outfile)
     X = X['arr_0']
@@ -70,23 +70,27 @@ def preprocess(X, max_len, num_bins):
 
 
 def cnn(X_train, y_train, X_test, y_test,
-        max_len, num_bins, nb_classes, 
+        max_len, num_bins, 
+        nb_classes, class_weight, 
         batch_size, epochs):
-    NUM_CONV_LAYERS = 2
+    NUM_CONV_LAYERS = 3
     NUM_DENSE_LAYERS = 1
-    NUM_FILTERS = 64
-    KERNEL_SIZE = 4
-    L2_LAMBDA = 0.0001
-    DROPOUT = 0.3
-    POOL_SIZE = 4
-    DENSE_SIZE = 128
+    NUM_FILTERS = 32
+    KERNEL_SIZE = 125
+    L2_LAMBDA = 0.01
+    DROPOUT = 0.2
+    POOL_SIZE = 3
+    DENSE_SIZE = 64
+    
+    print("Config:\nNUM_CONV_LAYERS: {}\nNUM_DENSE_LAYERS: {}\nNUM_FILTERS: {}\nKERNEL_SIZE: {}\nL2_LAMBDA: {}\nDROPOUT: {}\nPOOL_SIZE: {}\nDENSE_SIZE: {}"
+          .format(NUM_CONV_LAYERS, NUM_DENSE_LAYERS, NUM_FILTERS, KERNEL_SIZE, L2_LAMBDA, DROPOUT, POOL_SIZE, DENSE_SIZE))
 
     inputs = Input(batch_shape=(None, max_len, num_bins))
     x = inputs
     for layer_count in range(NUM_CONV_LAYERS - 1):
         x = Conv1D(filters=NUM_FILTERS, kernel_size=KERNEL_SIZE,
                    padding='valid', 
-                   strides=1, dilation_rate=2**layer_count,
+                   strides=1, dilation_rate=1, # 2**layer_count,
                    activation='linear',
                    kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
         x = BatchNormalization()(x)
@@ -117,16 +121,12 @@ def cnn(X_train, y_train, X_test, y_test,
     
     model = Model(inputs=inputs, outputs=x)
     
-    sgd_nest = optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
+    # sgd_nest = optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
     model.compile(loss='categorical_crossentropy',
-                  optimizer=sgd_nest,
+                  optimizer=Adam(lr=0.0001),
                   metrics=['accuracy'])
     model.summary()
     
-    # Set class weights to deal with imbalanced classes
-    class_balance = np.mean(y_train[:, 1])
-    class_weight = {0: 1-class_balance, 1: class_balance}
-
     history = model.fit(X_train, y_train, 
                         batch_size=batch_size, epochs=epochs,
                         validation_data=(X_test, y_test),
@@ -177,27 +177,27 @@ def model_performance(model, X_train, X_test, y_train, y_test):
     conf_matrix = standard_confusion_matrix(y_test, y_test_pred)
     print("\nConfusion Matrix:\n")
     print(conf_matrix)
+    
     target_name=['non-depressed','depressed']
-    clf_report = classification_report(y_test, y_test_pred,target_names=target_name)
+    clf_report = classification_report(y_test, y_test_pred, target_names=target_name)
+    print("\nClassification Report (sklearn):\n")
+    print(clf_report)
+
 #    precision=precision_score(y_test.tolist(), y_test_pred.tolist())
 #    print(precision_score(y_test.tolist(), y_test_pred.tolist()))
 #    recall=recall_score(y_test.tolist(), y_test_pred.tolist())
 #    f1=f1_score(y_test.tolist(), y_test_pred.tolist())  
 #    print("=====sklearn=======")
 #    print('precision: {0}\nrecall: {1} \nf1: {2}'.format(precision, recall,f1 ))
-    print("\nClassification Report (sklearn):\n")
-    print(clf_report)
 
-    return y_test_pred, y_train_pred, conf_matrix, clf_report
+    return y_train_pred, y_test_pred, conf_matrix, clf_report
 
 
 if __name__ == "__main__":
-    # model_id = input("Enter model id: ")
-
     # CNN training parameters
-    BATCH_SIZE = 32
+    BATCH_SIZE = 1
     NB_CLASSES = 2
-    EPOCHS = 2
+    EPOCHS = 3
 
     X_train = retrieve_file('train_samples.npz')
     y_train = retrieve_file('train_labels.npz')
@@ -215,22 +215,26 @@ if __name__ == "__main__":
     X_train = preprocess(X_train, max_len=MAX_LEN, num_bins=NUM_BINS)
     X_test = preprocess(X_test, max_len=MAX_LEN, num_bins=NUM_BINS)
     print(X_train.shape, X_test.shape)
-    
+
     # Convert class vectors to binary class matrices
     Y_train = np_utils.to_categorical(y_train, NB_CLASSES)
     Y_test = np_utils.to_categorical(y_test, NB_CLASSES)
     print(Y_train.shape, Y_test.shape)
 
+    # Compute class weights
+    cls_weight = class_weight.compute_class_weight('balanced', np.unique(y_train), y_train)
+    print("\nClass weights: ", cls_weight)
+
     # run CNN
     print('\nFitting model...')
-    
     model, history = cnn(X_train, Y_train, X_test, Y_test, 
-                         MAX_LEN, NUM_BINS, NB_CLASSES,
+                         MAX_LEN, NUM_BINS, 
+                         NB_CLASSES, cls_weight,
                          BATCH_SIZE, EPOCHS)
 
     # evaluate model
     print('\nEvaluating model...')
-    y_train_pred, y_test_pred, conf_matrix, clf_report= model_performance(model, X_train, X_test, y_train, y_test)
+    y_train_pred, y_test_pred, conf_matrix, clf_report = model_performance(model, X_train, X_test, y_train, y_test)
 
     # # save model to locally
     # print('Saving model locally...')
@@ -247,4 +251,3 @@ if __name__ == "__main__":
     print("Precision: {}".format(precision))
     print("Recall: {}".format(recall))
     print("F1-Score: {}".format(f1_score))
-
