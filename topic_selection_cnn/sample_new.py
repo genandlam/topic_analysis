@@ -76,9 +76,11 @@ def rand_samp_train_test_split():
    
     # Create final arrays
     train_samples = np.concatenate((train_samples_dep, train_samples_nor),  axis=0)
+    print(train_samples.shape)
     train_labels = np.concatenate((train_labels_dep, train_labels_nor),axis=0)
-   
-    return train_samples, train_labels, test_samples, test_labels
+    print(train_labels.shape)
+    return train_samples, train_labels, test_samples,\
+        test_labels 
 #    
 #    for key, _ in depressed_dict.iteritems():
 #        path = '/media/hdd1/genfyp/processed/'
