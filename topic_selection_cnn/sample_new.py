@@ -65,10 +65,7 @@ def rand_samp_train_test_split():
     print(max_samples)
 #    print(train_samples_dep)
 #    print(train_labels_dep )
- #   d = {'col1': [1, 2], 'col2': [3, 4]}
-#    train_dep={'samples':train_samples_dep,'labels':train_labels_dep}
-#    train_dep= pd.DataFrame(data=train_dep)
-    
+
     train_samples_dep, train_labels_dep = resample(train_samples_dep, train_labels_dep, n_samples=max_samples, random_state=15)
     train_samples_nor, train_labels_nor = resample(train_samples_nor, train_labels_nor, n_samples=max_samples, random_state=15)
 
@@ -81,19 +78,6 @@ def rand_samp_train_test_split():
     print(train_labels.shape)
     return train_samples, train_labels, test_samples,\
         test_labels 
-#    
-#    for key, _ in depressed_dict.iteritems():
-#        path = '/media/hdd1/genfyp/processed/'
-#        filename = 'D{}.npz'.format(key)
-#        outfile = path + filename
-#        np.savez(outfile, *depressed_dict[key])
-#    
-#    for key, _ in normal_dict.iteritems():
-#        path = '/media/hdd1/genfyp/processed/'
-#        filename = '/N{}.npz'.format(key)
-#        outfile = path + filename
-#        np.savez(outfile, *normal_dict[key])
-
 
 
 if __name__ == '__main__':

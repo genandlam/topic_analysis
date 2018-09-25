@@ -1,23 +1,23 @@
 from __future__ import print_function
-#import boto
 import os
 import tensorflow as tf
 import numpy as np
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import confusion_matrix
-#from plot_metrics import plot_accuracy, plot_loss, plot_roc_curve
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation, Flatten ,regularizers
-from keras.layers import Conv2D, MaxPooling2D
+from sklearn.metrics import confusion_matrix, classification_report,\
+                            f1_score, recall_score,precision_score
+# from plot_metrics import plot_accuracy, plot_loss, plot_roc_curve
+
+from keras.models import Model
+from keras.layers import Input, Conv1D, BatchNormalization, Activation, \
+                         Dropout, MaxPooling1D, GlobalAveragePooling1D, \
+                         GlobalMaxPooling1D, Lambda, Concatenate, Dense, regularizers
 from keras.utils import np_utils
 from keras import backend as K
-from keras.optimizers import Adam
 from keras import optimizers, activations
+from keras.optimizers import Adam
 from keras.wrappers.scikit_learn import KerasClassifier
-#access_key = os.environ['AWS_ACCESS_KEY_ID']
-#access_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
-np.random.seed(15)  # for reproducibility
 
+np.random.seed(15)  # for reproducibility
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth=True
@@ -29,152 +29,109 @@ K.set_image_dim_ordering('tf')
 
 """
 CNN used to classify spectrograms of normal participants (0) or depressed
-participants (1). Using Theano backend and Theano image_dim_ordering:
-(# channels, # images, # rows, # cols)
-(1, 3040, 513, 125)
+participants (1).
+(# images, # rows, # cols)
+(num_samples, time_dimension, mel_bin_dimension)
 """
 
-
-#def retrieve_from_bucket(file):
-#    """
-#    Download spectrogram representation of matrices from S3 bucket.
-#    """
-#    conn = boto.connect_s3(access_key, access_secret_key)
-#    bucket = conn.get_bucket('depression-detect')
-#    file_key = bucket.get_key(file)e
-#    file_key.get_contents_to_filename(file)
-#    X = np.load(file)
-#    return X
-
-
 def retrieve_file(file_name):
-    
     path = '/media/hdd1/genfyp/processed/'
     outfile = path + file_name
     X = np.load(outfile)
+    X = X['arr_0']
     return X
 
-def preprocess(X_train, X_test):
+
+def preprocess(X, max_len, num_bins):
     """
-    Convert from float64 to float32 and normalize normalize to decibels
-    relative to full scale (dBFS) for the 4 sec clip.
-    """
-    X_train = X_train.astype('float32')
-    X_test = X_test.astype('float32')
-
-    X_train = np.array([(X - X.min()) / (X.max() - X.min()) for X in X_train])
-    X_test = np.array([(X - X.min()) / (X.max() - X.min()) for X in X_test])
-    return X_train, X_test
-
-
-def prep_train_test(X_train, y_train, X_test, y_test, nb_classes):
-    """
-    Prep samples ands labels for Keras input by noramalzing and converting
-    labels to a categorical representation.
-    """
-    print('Train on {} samples, validate on {}'.format(X_train.shape[0],
-                                                       X_test.shape[0]))
-
-    # normalize to dBfS
-    X_train, X_test = preprocess(X_train, X_test)
-
-    # Convert class vectors to binary class matrices
-    Y_train = np_utils.to_categorical(y_train, nb_classes)
-    Y_test = np_utils.to_categorical(y_test, nb_classes)
-
-    return X_train, X_test, Y_train, Y_test
-
-
-def keras_img_prep(X_train, X_test, img_dep, img_rows, img_cols):
-    """
-    Reshape feature matrices for Keras' expexcted input dimensions.
-    For 'th' (Theano) dim_order, the model expects dimensions:
-    (# channels, # images, # rows, # cols).
-    """
-#    if K.image_dim_ordering() == 'th':
-#        X_train = X_train.reshape(X_train.shape[0], 1, img_rows, img_cols)
-#        X_test = X_test.reshape(X_test.shape[0], 1, img_rows, img_cols)
-#        input_shape = (1, img_rows, img_cols)
-#    else:
-#        X_train = X_train.reshape(X_train.shape[0], img_rows, img_cols, 1)
-#        X_test = X_test.reshape(X_test.shape[0], img_rows, img_cols, 1)
-#        input_shape = (img_rows, img_cols, 1)
-#    return X_train, X_test, input_shape
-
-#   if K.image_dim_ordering() == 'tf':
-    X_train = X_train.reshape(X_train.shape[0], img_cols, img_rows, 1)
-    X_test = X_test.reshape(X_test.shape[0], img_cols, img_rows, 1)
-    input_shape=(img_cols, img_rows, 1)
-         
-#    else:
-#        X_train = X_train.reshape( X_train.shape[0],1,img_rows, img_cols)
-#        X_test = X_test.reshape( X_test.shape[0],1,img_rows, img_cols)
-#        input_shape = (1,img_rows, img_cols)
-        
-    return X_train, X_test, input_shape
-
-def cnn(X_train, y_train, X_test, y_test, batch_size,
-        nb_classes, epochs, input_shape):
+    Preprocess input Xs to a numpy array where every training sample is zero padded 
+    to constant time dimension (max_len) and contains num_bins frequency bins.
     
-
-    """
-    The Convolutional Neural Net architecture for classifying the audio clips
-    as normal (0) or depressed (1).
-    """  
-   
-    model = Sequential()
-
-    model.add(Conv2D(32, (3, 3), padding='valid', strides=1,
-                     input_shape=input_shape, activation='relu',
-#                     kernel_regularizer=regularizers.l2(0.0001),
-                     dim_ordering='tf'))
-    model.add(MaxPooling2D(pool_size=(4, 3), strides=(1, 3), dim_ordering='tf'))
-#    model.add(Dropout(0.1))
-
-    model.add(Conv2D(32, (1, 5), padding='valid', strides=1,
-              input_shape=input_shape, activation='relu',
- #             kernel_regularizer=regularizers.l2(0.0001),
-              dim_ordering='tf'))   
-    model.add(MaxPooling2D(pool_size=(1, 3), strides=(1, 3), dim_ordering='tf'))
-#    model.add(Dropout(0.3))
+    Args:
+        X: numpy array of numpy arrays (X), each of which is of different time dimension 
+           but same mel dimension (usually 128)
+        max_len: Length up to which each np.array in X is padded with 0s
+        num_bins: Constant mel dimension
     
-    model.add(Flatten())
+    Returns:
+        X_proc: single numpy array of shape (X.shape[0], max_len, num_bins), which is fed into 1D CNN  
+    """
+    X_proc = np.zeros([X.shape[0], max_len, num_bins])
+    for idx, x in enumerate(X):
+        if x.shape[0] < max_len:
+            # Pad sequence (only in time dimension) with 0s
+            x = np.pad(x, pad_width=((0, max_len - x.shape[0]), (0,0)), mode='constant')
+        else:
+            # Trim sequence to be within max_len timesteps
+            x = x[:max_len, :]
+        # Update processed sequences
+        X_proc[idx, :, :] = x
+    return X_proc
 
-#    model.add(Dropout(0.3))
-    model.add(Dense(512, activation='relu'))
-#    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.2))
 
-    model.add(Dense(nb_classes))
-    model.add(Activation('softmax'))
+def cnn(X_train, y_train, X_test, y_test,
+        max_len, num_bins, nb_classes, 
+        batch_size, epochs):
+    NUM_CONV_LAYERS = 2
+    NUM_DENSE_LAYERS = 1
+    NUM_FILTERS = 64
+    KERNEL_SIZE = 4
+    L2_LAMBDA = 0.0001
+    DROPOUT = 0.3
+    POOL_SIZE = 4
+    DENSE_SIZE = 128
 
-#    optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam',sgd_nest]
-#    param_grid = dict(optimizer=optimizer)
-    adam=optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)   
-    sgd_nest=optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
+    inputs = Input(batch_shape=(None, max_len, num_bins))
+    x = inputs
+    for layer_count in range(NUM_CONV_LAYERS - 1):
+        x = Conv1D(filters=NUM_FILTERS, kernel_size=KERNEL_SIZE,
+                   padding='valid', 
+                   strides=1, dilation_rate=2**layer_count,
+                   activation='linear',
+                   kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
+        x = BatchNormalization()(x)
+        x = Activation('relu')(x)
+        x = Dropout(DROPOUT)(x)
+        x = MaxPooling1D(pool_size=POOL_SIZE)(x)
+    # Final Conv1D layer doesn't undergo MaxPooling1D
+    x = Conv1D(filters=NUM_FILTERS, kernel_size=KERNEL_SIZE,
+               padding='valid', 
+               strides=1, dilation_rate=2**layer_count,
+               activation='linear',
+               kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
+    x = BatchNormalization()(x)
+    x = Activation('relu')(x)
+    x = Dropout(DROPOUT)(x)
+
+    avgpool = GlobalAveragePooling1D()(x)
+    maxpool = GlobalMaxPooling1D()(x)
+    l2pool = Lambda(lambda a: K.l2_normalize(K.sum(a, axis=1)))(x)
+    x = Concatenate()([avgpool, maxpool, l2pool])
+    
+    for layer_count in range(NUM_DENSE_LAYERS):
+        x = Dense(units=DENSE_SIZE, activation='relu', 
+                  kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
+        x = Dropout(DROPOUT)(x)
+
+    x = Dense(nb_classes, activation='softmax')(x)
+    
+    model = Model(inputs=inputs, outputs=x)
+    
+    sgd_nest = optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
     model.compile(loss='categorical_crossentropy',
                   optimizer=sgd_nest,
                   metrics=['accuracy'])
-    
-#    batch_size = [10, 20, 40, 60, 80, 100]
-#    epochs = [10,20]
-#    k_model = KerasClassifier(build_fn=model, verbose=1)
-#    param_grid = dict(batch_size=batch_size, epochs=epochs)
-#    grid = GridSearchCV(estimator=k_model, param_grid=param_grid, n_jobs=-1)
-#    grid_result = grid.fit(X_train, y_train)
-#    # summarize results
-#    print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
-#    means = grid_result.cv_results_['mean_test_score']
-#    stds = grid_result.cv_results_['std_test_score']
-#    params = grid_result.cv_results_['params']
-#    for mean, stdev, param in zip(means, stds, params):
-#        print("%f (%f) with: %r" % (mean, stdev, param))
-    
     model.summary()
+    
+    # Set class weights to deal with imbalanced classes
+    class_balance = np.mean(y_train[:, 1])
+    class_weight = {0: 1-class_balance, 1: class_balance}
 
-
-    history = model.fit(X_train, y_train, batch_size=batch_size, epochs=epochs,
-                        verbose=1, validation_data=(X_test, y_test))
+    history = model.fit(X_train, y_train, 
+                        batch_size=batch_size, epochs=epochs,
+                        validation_data=(X_test, y_test),
+                        class_weight=class_weight,
+                        verbose=1)
 
     # Evaluate accuracy on test and train sets
     score_train = model.evaluate(X_train, y_train, verbose=0)
@@ -183,30 +140,6 @@ def cnn(X_train, y_train, X_test, y_test, batch_size,
     print('Test accuracy:', score_test[1])
 
     return model, history
-
-#    return model
-
-
-def model_performance(model, X_train, X_test, y_train, y_test):
-    """
-    Evaluation metrics for network performance.
-    """
-    y_test_pred = model.predict_classes(X_test)
-    y_train_pred = model.predict_classes(X_train)
-
-    y_test_pred_proba = model.predict_proba(X_test)
-    y_train_pred_proba = model.predict_proba(X_train)
-
-    # Converting y_test back to 1-D array for confusion matrix computation
-    y_test_1d = y_test[:, 1]
-
-    # Computing confusion matrix for test dataset
-    conf_matrix = standard_confusion_matrix(y_test_1d, y_test_pred)
-    print("Confusion Matrix:")
-    print(conf_matrix)
-
-    return y_train_pred, y_test_pred, y_train_pred_proba, \
-        y_test_pred_proba, conf_matrix
 
 
 def standard_confusion_matrix(y_test, y_test_pred):
@@ -226,80 +159,86 @@ def standard_confusion_matrix(y_test, y_test_pred):
     -------
     ndarray - 2D
     """
-    [[tn, fp], [fn, tp]] = confusion_matrix(y_test, y_test_pred)
+    cnf_matrix = confusion_matrix(y_test, y_test_pred)
+    print("\nConfusion Matrix: (sklearn)\n")
+    print(cnf_matrix)
+    [[tn, fp], [fn, tp]] = cnf_matrix
     return np.array([[tp, fp], [fn, tn]])
 
 
-#def save_to_bucket(file, obj_name):
-#    """
-#    Saves local file to S3 bucket for redundancy and repreoducibility
-#    by others.
-#    """
-#    conn = boto.connect_s3(access_key, access_secret_key)
-#
-#    bucket = conn.get_bucket('depression-detect')
-#
-#    file_object = bucket.new_key(obj_name)
-#    file_object.set_contents_from_filename(file)
+def model_performance(model, X_train, X_test, y_train, y_test):
+    """
+    Evaluation metrics for network performance.
+    """
+    y_test_pred = np.argmax(model.predict(X_test), axis=-1)
+    y_train_pred = np.argmax(model.predict(X_train), axis=-1)
+
+    # Computing confusion matrix for test dataset
+    conf_matrix = standard_confusion_matrix(y_test, y_test_pred)
+    print("\nConfusion Matrix:\n")
+    print(conf_matrix)
+    target_name=['non-depressed','depressed']
+    clf_report = classification_report(y_test, y_test_pred,target_names=target_name)
+#    precision=precision_score(y_test.tolist(), y_test_pred.tolist())
+#    print(precision_score(y_test.tolist(), y_test_pred.tolist()))
+#    recall=recall_score(y_test.tolist(), y_test_pred.tolist())
+#    f1=f1_score(y_test.tolist(), y_test_pred.tolist())  
+#    print("=====sklearn=======")
+#    print('precision: {0}\nrecall: {1} \nf1: {2}'.format(precision, recall,f1 ))
+    print("\nClassification Report (sklearn):\n")
+    print(clf_report)
+
+    return y_test_pred, y_train_pred, conf_matrix, clf_report
 
 
-if __name__ == '__main__':
-    model_id = input("Enter model id: ")
+if __name__ == "__main__":
+    # model_id = input("Enter model id: ")
 
-    # Load from S3 bucket
-    print('Retrieving from S3...')
+    # CNN training parameters
+    BATCH_SIZE = 32
+    NB_CLASSES = 2
+    EPOCHS = 2
+
     X_train = retrieve_file('train_samples.npz')
     y_train = retrieve_file('train_labels.npz')
     X_test = retrieve_file('test_samples.npz')
     y_test = retrieve_file('test_labels.npz')
 
-#    X_train = retrieve_from_bucket('train_samples.npz')
-#    y_train = retrieve_from_bucket('train_labels.npz')
-#    X_test = retrieve_from_bucket('test_samples.npz')
-#    y_test = retrieve_from_bucket('test_labels.npz')
-  
-    X_train, y_train, X_test, y_test = \
-        X_train['arr_0'], y_train['arr_0'], X_test['arr_0'], y_test['arr_0']
+    # Maximum time duration among training samples 
+    MAX_LEN = np.max([X_train[i].shape[0] for i in range(len(X_train))])
+    print("Maximum length of training X: {} (timesteps)".format(MAX_LEN))
+    # Number of mel bins in training samples
+    NUM_BINS = X_train[0].shape[1]
+    print("Number of mel bins: ", NUM_BINS)
 
-    # CNN parameters
-    batch_size = 32
-    nb_classes = 2
-    epochs = 7
-
-    # normalalize data and prep for Keras
-    print('Processing images for Keras...')
-    X_train, X_test, y_train, y_test = prep_train_test(X_train, y_train,
-                                                       X_test, y_test,
-                                                       nb_classes=nb_classes)
-
-    # 513x125x1 for spectrogram with crop size of 125 pixels
-    img_rows, img_cols, img_depth = X_train.shape[1], X_train.shape[2], 1
-
-    # reshape image input for Keras
-    # used Theano dim_ordering (th), (# chans, # images, # rows, # cols)
-    X_train, X_test, input_shape = keras_img_prep(X_train, X_test, img_depth,
-                                                  img_rows, img_cols)
+    # Preprocess input Xs
+    X_train = preprocess(X_train, max_len=MAX_LEN, num_bins=NUM_BINS)
+    X_test = preprocess(X_test, max_len=MAX_LEN, num_bins=NUM_BINS)
+    print(X_train.shape, X_test.shape)
+    
+    # Convert class vectors to binary class matrices
+    Y_train = np_utils.to_categorical(y_train, NB_CLASSES)
+    Y_test = np_utils.to_categorical(y_test, NB_CLASSES)
+    print(Y_train.shape, Y_test.shape)
 
     # run CNN
-    print('Fitting model...')
-#    model = cnn(X_train, y_train, X_test, y_test, batch_size,
-#                         nb_classes, epochs, input_shape)
-    model, history = cnn(X_train, y_train, X_test, y_test, batch_size,
-                         nb_classes, epochs, input_shape)
+    print('\nFitting model...')
+    
+    model, history = cnn(X_train, Y_train, X_test, Y_test, 
+                         MAX_LEN, NUM_BINS, NB_CLASSES,
+                         BATCH_SIZE, EPOCHS)
 
+    # evaluate model
+    print('\nEvaluating model...')
+    y_train_pred, y_test_pred, conf_matrix, clf_report= model_performance(model, X_train, X_test, y_train, y_test)
 
-     #evaluate model
-    print('Evaluating model...')
-    y_train_pred, y_test_pred, y_train_pred_proba, y_test_pred_proba, \
-        conf_matrix = model_performance(model, X_train, X_test, y_train, y_test)
+    # # save model to locally
+    # print('Saving model locally...')
+    # model_name = '/media/hdd1/genfyp/models/cnn_{}.h5'.format(model_id)
+    # model.save(model_name)
 
-    # save model to locally
-    print('Saving model locally...')
-    model_name = '/media/hdd1/genfyp/models/cnn_{}.h5'.format(model_id)
-    model.save(model_name)
-
-  #   custom evaluation metrics
-    print('Calculating additional test metrics...')
+    # custom evaluation metrics
+    print('\nCalculating additional test metrics...')
     accuracy = float(conf_matrix[0][0] + conf_matrix[1][1]) / np.sum(conf_matrix)
     precision = float(conf_matrix[0][0]) / (conf_matrix[0][0] + conf_matrix[0][1])
     recall = float(conf_matrix[0][0]) / (conf_matrix[0][0] + conf_matrix[1][0])
@@ -309,12 +248,3 @@ if __name__ == '__main__':
     print("Recall: {}".format(recall))
     print("F1-Score: {}".format(f1_score))
 
-    # plot train/test loss and accuracy. saves files in working dir
-#    print('Saving plots...')
-#    plot_loss(history, model_id)
-#    plot_accuracy(history, model_id)
-#    plot_roc_curve(y_test[:, 1], y_test_pred_proba[:, 1], model_id)
-
-    # save model S3
-#    print('Saving model to S3...')
-#    save_to_bucket(model_name, 'cnn_{}.h5'.format(model_id))

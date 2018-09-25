@@ -7,7 +7,7 @@ Created on Tue Sep 11 16:13:32 2018
 """
 
 import pandas as pd
-
+from spectrogram_dict import get_depression_label
 import os
 from pydub import AudioSegment
 
@@ -53,7 +53,10 @@ def segment_want(df,participant_id,path):
    # combined.export('491_combine.wav', format="wav")
     return combined
         
-
+def data_augmentation(partic_id):
+    
+    depressed = get_depression_label(partic_id)
+    
 
 
          
