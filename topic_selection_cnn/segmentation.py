@@ -5,6 +5,7 @@ import scipy.io.wavfile as wavfile
 import wave
 
 
+
 """
 A script that iterates through the extracted wav files and uses
 pyAudioAnalysis' silence extraction module to make a wav file containing the
@@ -16,9 +17,9 @@ interviewer speech removed)
 def remove_silence(filename, out_dir, smoothing=1.0, weight=0.3, plot=False):
     """
     A function that implements pyAudioAnalysis' silence extraction module
-    and creates wav files of the participant specific portions of audio. The
+    and creates wav files of the participant spec
+    ic portions of audio. The
     smoothing and weight parameters were tuned for the AVEC 2016 dataset.
-
     Parameters
     ----------
     filename : filepath
@@ -32,7 +33,6 @@ def remove_silence(filename, out_dir, smoothing=1.0, weight=0.3, plot=False):
         probability threshold for silence removal used in SVM
     plot : bool
         plots SVM probabilities of silence (used in tuning)
-
     Returns
     -------
     A folder for each participant containing a single wav file
@@ -41,28 +41,25 @@ def remove_silence(filename, out_dir, smoothing=1.0, weight=0.3, plot=False):
     performed on these segmented wav files.
     """
     partic_id = 'P' + filename.split('/')[-1].split('_')[0]  # PXXX
-    if is_segmentable(partic_id):
-        # create participant directory for segmented wav files
-        participant_dir = os.path.join(out_dir, partic_id)
-        if not os.path.exists(participant_dir):
-            os.makedirs(participant_dir)
-        print(filename)
-        os.chdir(participant_dir)
-        participant_dir = os.path.join(out_dir, partic_id)
-        if not os.path.exists(participant_dir):
-            os.makedirs(participant_dir)
+#    if is_segmentable(partic_id):
+         #create participant directory for segmented wav files
+    participant_dir = os.path.join(out_dir, partic_id)
+    print(participant_dir)
+    if not os.path.exists(participant_dir):
+        os.makedirs(participant_dir)
+        print('yes')
+    os.chdir(participant_dir)
 
-        os.chdir(participant_dir)
-        [Fs, x] = aIO.readAudioFile(filename)
-        segments = aS.silenceRemoval(x, Fs, 0.020, 0.020,
-                                     smoothWindow=smoothing,
-                                     
-                                     plot=plot)
+    [Fs, x] = aIO.readAudioFile(filename)
+    segments = aS.silenceRemoval(x, Fs, 0.020, 0.020,
+                                 smoothWindow=smoothing,
+                                 #Weight=weight,
+                                 plot=plot)
 
-        for s in segments:
-            seg_name = "{:s}_{:.2f}-{:.2f}.wav".format(partic_id, s[0], s[1])
-            wavfile.write(seg_name, Fs, x[int(Fs * s[0]):int(Fs * s[1])])
-
+    for s in segments:
+        seg_name = "{:s}_{:.2f}-{:.2f}.wav".format(partic_id, s[0], s[1])
+        wavfile.write(seg_name, Fs, x[int(Fs * s[0]):int(Fs * s[1])])
+        print(partic_id)
         # concatenate segmented wave files within participant directory
         concatenate_segments(participant_dir, partic_id)
 
@@ -95,13 +92,15 @@ def concatenate_segments(participant_dir, partic_id, remove_segment=True):
     data = []
     for infile in infiles:
         w = wave.open(infile, 'rb')
-       
+#        w=wavfile.read(infile, mmap=False)
+        
         data.append([w.getparams(), w.readframes(w.getnframes())])
         w.close()
         if remove_segment:
             os.remove(infile)
 
     output = wave.open(outfile, 'wb')
+#    output=wavfile.write(outfile, mmap=False)       
     # details of the files must be the same (channel, frame rates, etc.)
     output.setparams(data[0][0])
 
@@ -114,15 +113,20 @@ def concatenate_segments(participant_dir, partic_id, remove_segment=True):
 if __name__ == '__main__':
     # directory containing raw wav files
 #    dir_name = '/Users/genevieve/Desktop/raw_data/audio'
+#    dir_name = '/media/hdd1/genfyp/raw_data/audio_new'
     dir_name = '/media/hdd1/genfyp/raw_data/selected'
+    new_name='/media/hdd1/genfyp/raw_data/data_aug'
+    
     # directory where a participant folder will be created containing their
     # segmented wav file
+#    out_dir = '/media/hdd1/genfyp/raw_data/interim'
     out_dir = '/media/hdd1/genfyp/raw_data/interim_selected'
-#    out_dir = '/Users/genevieve/Desktop/raw_data/processed'
     # iterate through wav files in dir_name and create a segmented wav_file
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
     for file in os.listdir(dir_name):
+        if file.endswith('.wav'):
+            filename = os.path.join(dir_name, file)
+            remove_silence(filename, out_dir)
+    for file in os.listdir(new_name):
         if file.endswith('.wav'):
             filename = os.path.join(dir_name, file)
             remove_silence(filename, out_dir)

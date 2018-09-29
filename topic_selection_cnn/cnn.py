@@ -77,6 +77,7 @@ def cnn(X_train, y_train, X_test, y_test,
     NUM_DENSE_LAYERS = 1
     NUM_FILTERS = 32
     KERNEL_SIZE = 125
+    STRIDES = 1
     L2_LAMBDA = 0.01
     DROPOUT = 0.2
     POOL_SIZE = 3
@@ -89,8 +90,7 @@ def cnn(X_train, y_train, X_test, y_test,
     x = inputs
     for layer_count in range(NUM_CONV_LAYERS - 1):
         x = Conv1D(filters=NUM_FILTERS, kernel_size=KERNEL_SIZE,
-                   padding='valid', 
-                   strides=1, dilation_rate=1, # 2**layer_count,
+                   padding='valid', strides=STRIDES,
                    activation='linear',
                    kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
         x = BatchNormalization()(x)
@@ -99,8 +99,7 @@ def cnn(X_train, y_train, X_test, y_test,
         x = MaxPooling1D(pool_size=POOL_SIZE)(x)
     # Final Conv1D layer doesn't undergo MaxPooling1D
     x = Conv1D(filters=NUM_FILTERS, kernel_size=KERNEL_SIZE,
-               padding='valid', 
-               strides=1, dilation_rate=2**layer_count,
+               padding='valid', strides=STRIDES,
                activation='linear',
                kernel_regularizer=regularizers.l2(L2_LAMBDA))(x)
     x = BatchNormalization()(x)
@@ -123,7 +122,7 @@ def cnn(X_train, y_train, X_test, y_test,
     
     # sgd_nest = optimizers.SGD(lr=0.01, momentum=0.00, decay=0.0, nesterov=True)
     model.compile(loss='categorical_crossentropy',
-                  optimizer=Adam(lr=0.0001),
+                  optimizer=Adam(lr=6.25e-6),
                   metrics=['accuracy'])
     model.summary()
     
@@ -197,7 +196,7 @@ if __name__ == "__main__":
     # CNN training parameters
     BATCH_SIZE = 1
     NB_CLASSES = 2
-    EPOCHS = 3
+    EPOCHS = 1
 
     X_train = retrieve_file('train_samples.npz')
     y_train = retrieve_file('train_labels.npz')
